@@ -5,6 +5,333 @@ title: Customers Tab
 
 <p><h1>Customers Tab</h1></p>
 
-<p>The Customers Tab in Venue Driver is the "master database" of customer data for an account. Only managers and administrators have access to this function. Any names from a reservation, guestlist, or ticket purchase will appear in this tab, along with the activity and monetary spends of the customer in question. In addition, customers can be created directly in the Customers tab. Contacts from the Contact form feature on the iOS app will also end up here, under the Contact Group "Data Collection".</p>
+<p>The Customers Tab in Venue Driver is the "master database" of customer and guest data for an account. Only managers and administrators have access to this function. Any names from a reservation, guestlist, or ticket purchase will appear in this tab, along with the activity and monetary spends of the customer in question. In addition, customers can be created directly in the Customers tab. Contacts from the Contact form feature on the iOS app will also end up here, under the Contact Group "Data Collection". The Customers tab also includes a Google-like comprehensive search feature which will return results based on any search term.</p>
 
 <!-- show customers tab. -->
+
+<h2>Contacts</h2>
+
+<p>This is the ungrouped, master list of all the customer information gathered for an account by Venue Driver. Each column can be clicked on to sort the list. The columns are defined below.</p>
+
+<p><b>First.</b></p>
+
+<p>The first name of the customer.</p>
+
+<p><b>Last</b></p>.
+
+<p>The last name of the customer.</p>
+
+<p><b>Activity</b></p>.
+
+<p>The amount of activity a customer has done. Activity counts as a reservation or a guestlist entry.</p>
+
+<p><b>Attendance</b></p>.
+
+<p>The amount of times a customer has attended the venue. Attendance is recorded when the customer is checked in.</p>
+
+<p><b>Total Spend</b></p>.
+
+<p>The total amount, in the local currency, a customer has spent. This data is gathered from returns entered or captured. Thus, if no returns are entered or captured, no spending data is recorded for a customer.</p>
+
+<h2>Activity</h2>
+
+<p>Clicking on the "Activity" button will show a detailed report on a customer's activity. The columns and fields are defined below.</p>
+
+<!-- show a focus on activity export etc -->
+
+<p><b>The customer's name is in bold</b></p>.
+
+<p><b>The customer's street address, if collected, is displayed</b></p>.
+
+<p><b>The customer's phone number, if collected, is displayed</b></p>.
+
+<p><b>The customer's email, if collected, is displayed</b></p>.
+
+<p><b>Date</b></p>.
+
+<p>The dates in which the customer has attended an event.</p>
+
+<p><b>Venue</b></p>.
+
+<p>The venue which the customer has attended.</p>
+
+<p><b>Event</b></p>.
+
+<p>The title of the event the customer attended</p>.
+
+<p><b>Type</b></p>.
+
+<p>The activity type. VIP equals a VIP reservation that was checked in, Guestlist equals a guestlist request that was checked in.</p>
+
+<p><b>Notes</b></p>.
+
+<p>Any notes about this specific activity gathered upon check-in</p>.
+
+<h3>Show</h3>
+
+<p>Clicking the "Show Button" will display additional details about this customer for this activity, including which employee they were entered into the system by, their minimum spend (if this was a VIP reservation), and other details about this activity.</p>
+
+<!-- show focus on these additional details. -->
+
+<h3>Export</h3>
+
+<p>A customer's activity can be exported to a CSV file, which can be read by popular spreadsheet programs such as Open Office Calc, Excel, and Numbers.</p>
+
+<h3>Edit</h3>
+
+<p>Clicking on the "Edit" button allows the parameters of the customer to be edited and updated. Those fields are defined below.</p>
+
+<!-- show customer edit. -->
+
+<p><b>First</b></p>.
+
+<p>The first name of the guest</p>.
+
+<p><b>Last</b></p>.
+
+<p>The last name of the guest.</p>
+
+<p><b>Phone number.</b></p>
+
+<p>The phone number of the guest. This is one of two pieces of unique data to create an individual customer record.</p>
+
+<p><b>Email.</b></p>
+
+<p>The email address of a guest. This is the other piece of unique data that can be entered to create an individual customer record.</p>
+
+<p><b>Address 1.</b></p>
+
+<p>The street address of the customer. For example, 420 Lincoln Road</p>.
+
+<p><b>Address 2.</b></p>
+
+<p>An additional address detail of the customer. For example, Suite 440.</p>
+
+<p><b>City.</b></p>
+
+<p>The customer's city of residence.</p>
+
+<p><b>State</b></p>.
+
+<p>The customer's state/province/county/prefecture/territory/district/oblast.</p>
+
+<!-- We'll need to revise this as we take over the world. -->
+
+<p><b>Zip</b></p>.
+
+<p>The ZIP/postal code of the customer.</p>
+
+<p><b>Gender.</b></p>
+
+<p>The gender of the customer.</p>
+
+<!-- probably want to alter this to male - female - other -->
+
+<p><b>Date of birth</b></p>.
+
+<p>The customer's birthday.</p>
+
+<!-- Chronic will parse whatever's thrown at it but the drop downs default to the 21st century only. -->
+
+<p><b>Customer Matching Rules</p></b>.
+
+<p>Customer Matching Rules is where variations on a customer's data can be entered to ensure proper matching and minimize the chance of a duplicate record. For example, an alternate spelling of a first name could be provided, i.e. Jon for Jonathan, or Lu for Luis. Or an alternate email address.</p>
+
+<p><b>Caliber</b></p>.
+
+<b>Caliber is a 1 through 10 rating system of the customer. Not visible to the public, this field allows for a customer to be rated on factors determined by the venue</p>.
+  
+<p><b>Music Preference</b></p>.
+
+<p>A customer's musical preference can be selected here. More types of music will be added to this drop-down menu in a future release</p>.
+
+<p><b>Gaming preference</b></p>.
+
+<p>A customer's gaming preference can be recorded here for those venues in markets where gambling is present.</p>
+
+<p><b>Drink Preference</b></p>.
+
+<p>A customer's preferred drink can be entered here, for example "Vodka Tonic", "Jack and Cola", "Jägermeister", "Everclear".</p>
+
+<p><b>Event preference.</b></p>
+
+<p>A customer's preferred event type can be entered here, for example "Celebrity event", "DJ-driven", "Live concert", "MMA".</p>
+
+<p><b>Family</b></p>.
+
+<p>Any family members of interest to the venue for this customer can be entered here.</p>
+
+<h2>Contact Groups</h2>
+
+<p>Venue Driver, by default, groups customers according to which employee of a venue put them into the system. This is a more organized layout of the above, for those venues who wish to manage their customers by employee. Each column is sortable.</p>
+
+<!-- Show Contact groups. -->
+
+<p><b>First.</b></p>
+
+<p>The first name of the employee.</p>
+
+<p><b>Last</b></p>.
+
+<p>The last name of the employee.</p>
+
+<p><b>Activity</b></p>.
+
+<p>The amount of activity an employee has generated through his or her customers.</p>
+
+<p><b>Attendance</b></p>.
+
+<p>The amount of times an employee's customers have attended the venue in total. This is only recorded if returns are input.</p>
+
+<p><b>Total Spend</b></p>.
+
+<p>The total amount, in the local currency, which an employee has bought into the venue. This is only tracked is spends are input for reservations.</p>
+
+<h3>Contacts Button</h3>
+
+<p>An employee's contacts can be viewed by clicking the "Contacts" button. Within here, contacts can be re-booked for reservations and guestlists as well as their activity being exported and shown. </p>
+
+
+<!-- Show an employee's contact list. -->
+
+<h3>Activity Button</h3>
+
+<p>Clicking on the "Activity" button will show a detailed report on a customer's activity. The columns and fields are defined below.</p>
+
+<!-- show a focus on activity export etc -->
+
+<p><b>The customer's name is in bold</b></p>.
+
+<p><b>The customer's street address, if collected, is displayed</b></p>.
+
+<p><b>The customer's phone number, if collected, is displayed</b></p>.
+
+<p><b>The customer's email, if collected, is displayed</b></p>.
+
+<p><b>Date</b></p>.
+
+<p>The dates in which the customer has attended an event.</p>
+
+<p><b>Venue</b></p>.
+
+<p>The venue which the customer has attended.</p>
+
+<p><b>Event</b></p>.
+
+<p>The title of the event the customer attended</p>.
+
+<p><b>Type</b></p>.
+
+<p>The activity type. VIP equals a VIP reservation that was checked in, Guestlist equals a guestlist request that was checked in.</p>
+
+<p><b>Notes</b></p>.
+
+<p>Any notes about this specific activity gathered upon check-in</p>.
+
+<h3>Export Button</h3>.
+
+<p>A customer's activity can be exported to a CSV file, which can be read by popular spreadsheet programs such as Open Office Calc, Excel, and Numbers.</p>
+
+<h3>Edit Button.</h3>
+
+<p>Clicking on the "Edit" button allows the parameters of the customer to be edited and updated. Those fields are defined below.</p>
+
+<!-- show customer edit. -->
+
+<p><b>First</b></p>.
+
+<p>The first name of the guest</p>.
+
+<p><b>Last</b></p>.
+
+<p>The last name of the guest.</p>
+
+<p><b>Phone number.</b></p>
+
+<p>The phone number of the guest. This is one of two pieces of unique data to create an individual customer record.</p>
+
+<p><b>Email.</b></p>
+
+<p>The email address of a guest. This is the other piece of unique data that can be entered to create an individual customer record.</p>
+
+<p><b>Address 1.</b></p>
+
+<p>The street address of the customer. For example, 420 Lincoln Road</p>.
+
+<p><b>Address 2.</b></p>
+
+<p>An additional address detail of the customer. For example, Suite 440.</p>
+
+<p><b>City.</b></p>
+
+<p>The customer's city of residence.</p>
+
+<p><b>State</b></p>.
+
+<p>The customer's state/province/county/prefecture/territory/district/oblast.</p>
+
+<!-- We'll need to revise this as we take over the world. -->
+
+<p><b>Zip</b></p>.
+
+<p>The ZIP/postal code of the customer.</p>
+
+<p><b>Gender.</b></p>
+
+<p>The gender of the customer.</p>
+
+<!-- probably want to alter this to male - female - other -->
+
+<p><b>Date of birth</b></p>.
+
+<p>The customer's birthday.</p>
+
+<!-- Chronic will parse whatever's thrown at it but the drop downs default to the 21st century only. -->
+
+<p><b>Customer Matching Rules</p></b>.
+
+<p>Customer Matching Rules is where variations on a customer's data can be entered to ensure proper matching and minimize the chance of a duplicate record. For example, an alternate spelling of a first name could be provided, i.e. Jon for Jonathan, or Lu for Luis. Or an alternate email address.</p>
+
+<p><b>Caliber</b></p>.
+
+<b>Caliber is a 1 through 10 rating system of the customer. Not visible to the public, this field allows for a customer to be rated on factors determined by the venue</p>.
+  
+<p><b>Music Preference</b></p>.
+
+<p>A customer's musical preference can be selected here. More types of music will be added to this drop-down menu in a future release</p>.
+
+<p><b>Gaming preference</b></p>.
+
+<p>A customer's gaming preference can be recorded here for those venues in markets where gambling is present.</p>
+
+<p><b>Drink Preference</b></p>.
+
+<p>A customer's preferred drink can be entered here, for example "Vodka Tonic", "Jack and Cola", "Jägermeister", "Everclear".</p>
+
+<p><b>Event preference.</b></p>
+
+<p>A customer's preferred event type can be entered here, for example "Celebrity event", "DJ-driven", "Live concert", "MMA".</p>
+
+<p><b>Family</b></p>.
+
+<p>Any family members of interest to the venue for this customer can be entered here.</p>
+
+<h3>Show Button</h3>.
+
+<p>A customer's information can be displayed here. Of special interest in this field is the ability to re-book a customer for future events as either a reservation or a guestlist entry.</p>
+<!-- Show rebooking a customer. -->
+
+<p>When rebooking a customer for a reservation or a guestlist, the customer's details can be altered depending on the situation. This will update the customer profile.</p>
+
+<h3>Export Button (Main Contact Groups)</h3>
+
+<!-- Show focus on this one -->
+
+<p>Clicking the "Export" button next to an employee's name will export their entire customer list to a CSV file, readable in Open Office Calc, Excel, or Numbers.</p>.
+
+
+
+
+
+
+  
