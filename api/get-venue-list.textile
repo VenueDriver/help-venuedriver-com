@@ -1,0 +1,127 @@
+---
+layout: standard
+title: Get a Venue List for an Account
+---
+
+h1. Get a venue list for an account
+
+If you're only dealing with one venue then you don't need to use the API to obtain a venue list.  You
+can simply obtain your venue's ID from Venue Driver support staff, and then use other API methods for
+accessing lists of events for a venue, flyers for an event, etc.
+
+If you need to obtain a list of venues for an account, then you will need the account ID, which you can obtain from Venue Driver support.  Then use that account ID to request a list of venues for that account:
+
+<pre>
+<code>
+curl 'http://venuedriver.com/api/accounts/1234/venues.xml?username=venuesite&password=password'
+</code>
+</pre>
+
+Replace the number '1234' in the above example with your account ID, and replace the username and password with your authentication information.
+
+The above will return something like this:
+
+<pre>
+<code>
+<?xml version="1.0" encoding="UTF-8"?>
+<venues type="array">
+  <venue>
+    <address nil="true"></address>
+    <city>Las Vegas</city>
+    <country>USA</country>
+    <created-at type="datetime">2010-07-13T12:14:18-04:00</created-at>
+    <description nil="true"></description>
+    <email>guestlist54@lv.mgmgrand.com</email>
+    <guestlist-close-time type="datetime">2000-01-01T21:00:00-05:00</guestlist-close-time>
+    <guestlists-sort nil="true"></guestlists-sort>
+    <home-URL>http://www.mgmgrand.com/</home-URL>
+    <id type="integer">35</id>
+    <latitude>36.146532</latitude>
+    <longitude>-115.193981</longitude>
+    <myspace-URL nil="true"></myspace-URL>
+    <payment-gateway>PlugNPay</payment-gateway>
+    <phone>702-425-9399</phone>
+    <reservations-sort nil="true"></reservations-sort>
+    <reservations-summary-time type="datetime">2000-01-01T21:00:00-05:00</reservations-summary-time>
+    <social-status nil="true"></social-status>
+    <sort-name>first</sort-name>
+    <state>NV</state>
+    <tickets-sort nil="true"></tickets-sort>
+    <time-zone>US/Pacific</time-zone>
+    <title>Studio 54</title>
+    <updated-at type="datetime">2010-07-13T12:14:18-04:00</updated-at>
+    <zip>81901</zip>
+  </venue>
+  <venue>
+    <address>3799 Las Vegas Boulevard South</address>
+    <city>Las Vegas</city>
+    <country>USA</country>
+    <created-at type="datetime">2010-07-13T12:14:18-04:00</created-at>
+    <description nil="true"></description>
+    <email>guestlisttabu@lv.mgmgrand.com</email>
+    <guestlist-close-time type="datetime">2000-01-01T21:00:00-05:00</guestlist-close-time>
+    <guestlists-sort nil="true"></guestlists-sort>
+    <home-URL>http://www.mgmgrand.com/</home-URL>
+    <id type="integer">1</id>
+    <latitude>36.101688</latitude>
+    <longitude>-115.172111</longitude>
+    <myspace-URL nil="true"></myspace-URL>
+    <payment-gateway>PlugNPay</payment-gateway>
+    <phone>702-891-7983</phone>
+    <reservations-sort nil="true"></reservations-sort>
+    <reservations-summary-time type="datetime">2000-01-01T21:00:00-05:00</reservations-summary-time>
+    <social-status nil="true"></social-status>
+    <sort-name>first</sort-name>
+    <state>NV</state>
+    <tickets-sort nil="true"></tickets-sort>
+    <time-zone>US/Pacific</time-zone>
+    <title>Tab&#250; Ultra Lounge</title>
+    <updated-at type="datetime">2010-07-13T12:14:18-04:00</updated-at>
+    <zip>89109</zip>
+  </venue>
+  <venue>
+    <address>3799 Las Vegas Boulevard South</address>
+    <city>Las Vegas</city>
+    <country>USA</country>
+    <created-at type="datetime">2010-07-13T12:14:18-04:00</created-at>
+    <description nil="true"></description>
+    <email>reservations@angelpromo.com</email>
+    <guestlist-close-time type="datetime">2000-01-01T10:00:00-05:00</guestlist-close-time>
+    <guestlists-sort nil="true"></guestlists-sort>
+    <home-URL>http://www.wetrepublic.com/</home-URL>
+    <id type="integer">36</id>
+    <latitude>36.101198</latitude>
+    <longitude>-115.172424</longitude>
+    <myspace-URL nil="true"></myspace-URL>
+    <payment-gateway>PlugNPay</payment-gateway>
+    <phone>702.891.1111</phone>
+    <reservations-sort nil="true"></reservations-sort>
+    <reservations-summary-time type="datetime">2000-01-01T10:00:00-05:00</reservations-summary-time>
+    <social-status nil="true"></social-status>
+    <sort-name>first</sort-name>
+    <state>NV</state>
+    <tickets-sort nil="true"></tickets-sort>
+    <time-zone>US/Pacific</time-zone>
+    <title>Wet Republic</title>
+    <updated-at type="datetime">2010-07-13T12:14:18-04:00</updated-at>
+    <zip>89109</zip>
+  </venue>
+</venues>
+</code>
+</pre>
+
+You can also request the same information with JSON formatting instead of XML, like this:
+
+<pre>
+<code>
+curl 'http://venuedriver.com/api/accounts/1234/venues.json?username=venuesite&password=password'
+</code>
+</pre>
+
+The above will return the same information, formatted with JSON:
+
+<pre>
+<code>
+[{"city": "Las Vegas", "address": null, "zip": "81901", "myspace_URL": null, "latitude": "36.146532", "created_at": "2010/07/13 12:14:18 -0400", "title": "Studio 54", "reservations_sort": null, "country": "USA", "updated_at": "2010/07/13 12:14:18 -0400", "sort_name": "first", "payment_gateway": "PlugNPay", "guestlists_sort": null, "id": 35, "phone": "702-425-9399", "guestlist_close_time": "2000/01/01 21:00:00 -0500", "time_zone": "US/Pacific", "social_status": null, "reservations_summary_time": "2000/01/01 21:00:00 -0500", "longitude": "-115.193981", "home_URL": "http://www.mgmgrand.com/", "description": null, "tickets_sort": null, "state": "NV", "email": "guestlist54@lv.mgmgrand.com"}, {"city": "Las Vegas", "address": "3799 Las Vegas Boulevard South", "zip": "89109", "myspace_URL": null, "latitude": "36.101688", "created_at": "2010/07/13 12:14:18 -0400", "title": "Tab\u00fa Ultra Lounge", "reservations_sort": null, "country": "USA", "updated_at": "2010/07/13 12:14:18 -0400", "sort_name": "first", "payment_gateway": "PlugNPay", "guestlists_sort": null, "id": 1, "phone": "702-891-7983", "guestlist_close_time": "2000/01/01 21:00:00 -0500", "time_zone": "US/Pacific", "social_status": null, "reservations_summary_time": "2000/01/01 21:00:00 -0500", "longitude": "-115.172111", "home_URL": "http://www.mgmgrand.com/", "description": null, "tickets_sort": null, "state": "NV", "email": "guestlisttabu@lv.mgmgrand.com"}, {"city": "Las Vegas", "address": "3799 Las Vegas Boulevard South", "zip": "89109", "myspace_URL": null, "latitude": "36.101198", "created_at": "2010/07/13 12:14:18 -0400", "title": "Wet Republic", "reservations_sort": null, "country": "USA", "updated_at": "2010/07/13 12:14:18 -0400", "sort_name": "first", "payment_gateway": "PlugNPay", "guestlists_sort": null, "id": 36, "phone": "702.891.1111", "guestlist_close_time": "2000/01/01 10:00:00 -0500", "time_zone": "US/Pacific", "social_status": null, "reservations_summary_time": "2000/01/01 10:00:00 -0500", "longitude": "-115.172424", "home_URL": "http://www.wetrepublic.com/", "description": null, "tickets_sort": null, "state": "NV", "email": "reservations@angelpromo.com"}]
+</code>
+</pre>
