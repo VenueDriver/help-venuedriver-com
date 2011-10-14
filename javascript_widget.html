@@ -27,32 +27,7 @@ title: JavaScript Widget
   <li>link to the VenueWidget.js file directly from the S3 URL TODO: Put the S3 URL HERE</li>
 </ul>
 
-<b> It is very important that you link to the VenueWidget.js files from the S3 account. This will allow us to update the widget as new features come in without the need for you to update the file.</b>
+<p> <b> It is very important that you link to the VenueWidget.js files from the S3 account. This will allow us to update the widget as new features come in without the need for you to update the file.</b></p>
 
-<h3>The code should look like:</h3>
+<a href="https://gist.github.com/1287608">The code should look like</a>
 
-{% highlight html %}
-	<html>
-	  <head>
-			<link href="https://raw.github.com/Bakedweb/venue_widget/master/public/css/styles.css"  rel='stylesheet' type='text/css'/>
-	    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" charset="utf-8"></script>
-	    <script> 
-	      VenueConfig = new Object();
-	      VenueConfig.api_token = "";  //example '02AFRET3T6A961Q53'
-	      VenueConfig.account = '';  //example '12345'
-	      VenueConfig.div_id = 'venueWidgetMainTable'; //example 'my_div'
-	    </script>
-	    <script src="https://raw.github.com/Bakedweb/venue_widget/master/public/js/VenueWidget.js" charset="utf-8"></script>
-	  </head>
-	  <body>
-		<div id="wrapper">
-			<div id="center_table">
-		  	<div id="selectevent_columnlabelbar">
-					<div id="venueWidgetMainTable"></div>
-			  </div>
-			</div>
-		</div>  
-	</body>
-	</html>
-
-{% endhighlight %}
