@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>Venue Driver Documentation - Get Flyer Images for an Event</title>
+
+  <link href="http://venuedriver.com/stylesheets/fonts.css" media="all" rel="stylesheet" type="text/css" /> 
+
+  <link href="http://venuedriver.com/stylesheets/layout.css" media="screen" rel="stylesheet" type="text/css" /> 
+
+  <!--[if IE]>
+  <link href="http://venuedriver.com/stylesheets/ie.css" media="screen" rel="stylesheet" type="text/css" />
+  <![endif]--> 
+  <link rel="stylesheet" type="text/css" href="/stylesheets/fixed-width.css" title="Fixed-width"/> 
+  <link href="http://venuedriver.com/stylesheets/stretchy.css" media="all" rel="stylesheet" type="text/css" />
+  
+  <link href="stylesheets/documentation.css" rel="stylesheet" type="text/css">
+  <link href="../stylesheets/documentation.css" rel="stylesheet" type="text/css">
+  <link href="../../stylesheets/documentation.css" rel="stylesheet" type="text/css">
+
+  <link rel="shortcut icon" href="http://venuedriver.com/images/vn_logo_big.ico"> 
+</head>
+
+<body>
+
+  <div id="container" style="width: 950px; margin-left: auto; margin-right: auto;"> 
+
+  <div id="logo"><a href="/updates/index">Venue Driver<span class=""></span></a></div> 
+
+  <div id="content"> 
+
+  <div class="main_body"> 
+  <div id="content_body"> 
+  <div class="full_width">
+   
+  <h1>Get flyer images for an event</h1>
+<p>Flyers are a nested resource under the event resource.  They are not included in the event list returned by /venues/:venue_id/events.xml, but you can obtain them through the flyer resource:</p>
+<pre>
+<code>
+  curl 'http://venuedriver.com/api/venues/1234/events/5678/flyers.xml?username=venuesite&amp;password=password'
+</code>
+</pre>
+<p>The above will return the list of flyers for the event 5678:</p>
+<pre>
+<code>
+  &lt;?xml version="1.0" encoding="UTF-8"?&gt;
+  &lt;flyers type="array"&gt;
+    &lt;flyer&gt;
+      &lt;asset-content-type&gt;image/jpeg&lt;/asset-content-type&gt;
+      &lt;asset-file-name&gt;IMG_3020.jpg&lt;/asset-file-name&gt;
+      &lt;asset-file-size type="integer"&gt;473217&lt;/asset-file-size&gt;
+      &lt;asset-updated-at type="datetime"&gt;2010-03-02T17:00:00-05:00&lt;/asset-updated-at&gt;
+      &lt;event-id type="integer"&gt;5313&lt;/event-id&gt;
+      &lt;id type="integer"&gt;8&lt;/id&gt;
+      &lt;asset-url&gt;/assets/8/original/IMG_3020.jpg&lt;/asset-url&gt;
+    &lt;/flyer&gt;
+    &lt;flyer&gt;
+      &lt;asset-content-type&gt;image/jpeg&lt;/asset-content-type&gt;
+      &lt;asset-file-name&gt;IMG_2970.jpg&lt;/asset-file-name&gt;
+      &lt;asset-file-size type="integer"&gt;603736&lt;/asset-file-size&gt;
+      &lt;asset-updated-at type="datetime"&gt;2010-03-02T17:00:56-05:00&lt;/asset-updated-at&gt;
+      &lt;event-id type="integer"&gt;5313&lt;/event-id&gt;
+      &lt;id type="integer"&gt;9&lt;/id&gt;
+      &lt;asset-url&gt;/assets/9/original/IMG_2970.jpg&lt;/asset-url&gt;
+    &lt;/flyer&gt;
+    &lt;flyer&gt;
+      &lt;asset-content-type&gt;image/jpeg&lt;/asset-content-type&gt;
+      &lt;asset-file-name&gt;Safari-screenshot-236.jpg&lt;/asset-file-name&gt;
+      &lt;asset-file-size type="integer"&gt;58457&lt;/asset-file-size&gt;
+      &lt;asset-updated-at type="datetime"&gt;2010-03-02T18:02:25-05:00&lt;/asset-updated-at&gt;
+      &lt;event-id type="integer"&gt;5313&lt;/event-id&gt;
+      &lt;id type="integer"&gt;10&lt;/id&gt;
+      &lt;asset-url&gt;/assets/10/original/Safari-screenshot-236.jpg&lt;/asset-url&gt;
+    &lt;/flyer&gt;
+    &lt;flyer&gt;
+      &lt;asset-content-type&gt;application/pdf&lt;/asset-content-type&gt;
+      &lt;asset-file-name&gt;20091206-160523.pdf&lt;/asset-file-name&gt;
+      &lt;asset-file-size type="integer"&gt;3302460&lt;/asset-file-size&gt;
+      &lt;asset-updated-at type="datetime"&gt;2010-03-02T18:38:33-05:00&lt;/asset-updated-at&gt;
+      &lt;event-id type="integer"&gt;5313&lt;/event-id&gt;
+      &lt;id type="integer"&gt;12&lt;/id&gt;
+      &lt;asset-url&gt;/assets/12/original/20091206-160523.pdf&lt;/asset-url&gt;
+    &lt;/flyer&gt;
+    &lt;flyer&gt;
+      &lt;asset-content-type&gt;image/jpeg&lt;/asset-content-type&gt;
+      &lt;asset-file-name&gt;02_events.jpg&lt;/asset-file-name&gt;
+      &lt;asset-file-size type="integer"&gt;1378489&lt;/asset-file-size&gt;
+      &lt;asset-updated-at type="datetime"&gt;2010-03-02T18:39:34-05:00&lt;/asset-updated-at&gt;
+      &lt;event-id type="integer"&gt;5313&lt;/event-id&gt;
+      &lt;id type="integer"&gt;13&lt;/id&gt;
+      &lt;asset-url&gt;/assets/13/original/02_events.jpg&lt;/asset-url&gt;
+    &lt;/flyer&gt;
+  &lt;/flyers&gt;
+</code>
+</pre>
+<p>You can also use the show action for the event resource.  For example, this will return the list of flyer images for the event 5678 at the venue 1234:</p>
+<pre>
+<code>
+  curl 'http://venuedriver.com/api/venues/1234/events/5678.xml?username=venuesite&amp;password=password'
+</code>
+</pre>
+<p>The response includes the attributes for the event as in the above, but it also includes the nested flyer records:</p>
+<pre>
+<code>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;event&gt;
+  &lt;VIP-URL nil="true"&gt;&lt;/VIP-URL&gt;
+  &lt;active type="boolean" nil="true"&gt;&lt;/active&gt;
+  &lt;ages nil="true"&gt;&lt;/ages&gt;
+  &lt;close type="datetime"&gt;2000-01-01T09:00:00-05:00&lt;/close&gt;
+  &lt;closed-message nil="true"&gt;&lt;/closed-message&gt;
+  &lt;cover nil="true"&gt;&lt;/cover&gt;
+  &lt;created-at type="datetime"&gt;2010-01-02T01:01:46-05:00&lt;/created-at&gt;
+  &lt;date type="date"&gt;2010-03-02&lt;/date&gt;
+  &lt;description nil="true"&gt;&lt;/description&gt;
+  &lt;guestlist-URL nil="true"&gt;&lt;/guestlist-URL&gt;
+  &lt;guestlist-conditions nil="true"&gt;&lt;/guestlist-conditions&gt;
+  &lt;home-URL nil="true"&gt;&lt;/home-URL&gt;
+  &lt;id type="integer"&gt;5313&lt;/id&gt;
+  &lt;myspace-URL nil="true"&gt;&lt;/myspace-URL&gt;
+  &lt;open type="datetime"&gt;2000-01-01T22:30:00-05:00&lt;/open&gt;
+  &lt;tickets-URL nil="true"&gt;&lt;/tickets-URL&gt;
+  &lt;time type="datetime" nil="true"&gt;&lt;/time&gt;
+  &lt;title&gt;Tuesday Night&lt;/title&gt;
+  &lt;updated-at type="datetime"&gt;2010-03-01T14:42:14-05:00&lt;/updated-at&gt;
+  &lt;wiki-name nil="true"&gt;&lt;/wiki-name&gt;
+  &lt;flyers type="array"&gt;
+    &lt;flyer&gt;
+      &lt;asset-content-type&gt;image/jpeg&lt;/asset-content-type&gt;
+      &lt;asset-file-name&gt;IMG_3020.jpg&lt;/asset-file-name&gt;
+      &lt;asset-file-size type="integer"&gt;473217&lt;/asset-file-size&gt;
+      &lt;asset-updated-at type="datetime"&gt;2010-03-02T17:00:00-05:00&lt;/asset-updated-at&gt;
+      &lt;event-id type="integer"&gt;5313&lt;/event-id&gt;
+      &lt;id type="integer"&gt;8&lt;/id&gt;
+      &lt;asset-url&gt;/assets/8/original/IMG_3020.jpg&lt;/asset-url&gt;
+    &lt;/flyer&gt;
+    &lt;flyer&gt;
+      &lt;asset-content-type&gt;image/jpeg&lt;/asset-content-type&gt;
+      &lt;asset-file-name&gt;IMG_2970.jpg&lt;/asset-file-name&gt;
+      &lt;asset-file-size type="integer"&gt;603736&lt;/asset-file-size&gt;
+      &lt;asset-updated-at type="datetime"&gt;2010-03-02T17:00:56-05:00&lt;/asset-updated-at&gt;
+      &lt;event-id type="integer"&gt;5313&lt;/event-id&gt;
+      &lt;id type="integer"&gt;9&lt;/id&gt;
+      &lt;asset-url&gt;/assets/9/original/IMG_2970.jpg&lt;/asset-url&gt;
+    &lt;/flyer&gt;
+    &lt;flyer&gt;
+      &lt;asset-content-type&gt;image/jpeg&lt;/asset-content-type&gt;
+      &lt;asset-file-name&gt;Safari-screenshot-236.jpg&lt;/asset-file-name&gt;
+      &lt;asset-file-size type="integer"&gt;58457&lt;/asset-file-size&gt;
+      &lt;asset-updated-at type="datetime"&gt;2010-03-02T18:02:25-05:00&lt;/asset-updated-at&gt;
+      &lt;event-id type="integer"&gt;5313&lt;/event-id&gt;
+      &lt;id type="integer"&gt;10&lt;/id&gt;
+      &lt;asset-url&gt;/assets/10/original/Safari-screenshot-236.jpg&lt;/asset-url&gt;
+    &lt;/flyer&gt;
+    &lt;flyer&gt;
+      &lt;asset-content-type&gt;application/pdf&lt;/asset-content-type&gt;
+      &lt;asset-file-name&gt;20091206-160523.pdf&lt;/asset-file-name&gt;
+      &lt;asset-file-size type="integer"&gt;3302460&lt;/asset-file-size&gt;
+      &lt;asset-updated-at type="datetime"&gt;2010-03-02T18:38:33-05:00&lt;/asset-updated-at&gt;
+      &lt;event-id type="integer"&gt;5313&lt;/event-id&gt;
+      &lt;id type="integer"&gt;12&lt;/id&gt;
+      &lt;asset-url&gt;/assets/12/original/20091206-160523.pdf&lt;/asset-url&gt;
+    &lt;/flyer&gt;
+    &lt;flyer&gt;
+      &lt;asset-content-type&gt;image/jpeg&lt;/asset-content-type&gt;
+      &lt;asset-file-name&gt;02_events.jpg&lt;/asset-file-name&gt;
+      &lt;asset-file-size type="integer"&gt;1378489&lt;/asset-file-size&gt;
+      &lt;asset-updated-at type="datetime"&gt;2010-03-02T18:39:34-05:00&lt;/asset-updated-at&gt;
+      &lt;event-id type="integer"&gt;5313&lt;/event-id&gt;
+      &lt;id type="integer"&gt;13&lt;/id&gt;
+      &lt;asset-url&gt;/assets/13/original/02_events.jpg&lt;/asset-url&gt;
+    &lt;/flyer&gt;
+  &lt;/flyers&gt;
+&lt;/event&gt;
+</code>
+</pre>
+
+  </div>
+  </div>
+  </div>
+
+  </div>
+  </div>
+
+</body>
+</html>

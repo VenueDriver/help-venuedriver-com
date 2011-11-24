@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>Venue Driver Documentation - Get the HTML for an Event Select Tag</title>
+
+  <link href="http://venuedriver.com/stylesheets/fonts.css" media="all" rel="stylesheet" type="text/css" /> 
+
+  <link href="http://venuedriver.com/stylesheets/layout.css" media="screen" rel="stylesheet" type="text/css" /> 
+
+  <!--[if IE]>
+  <link href="http://venuedriver.com/stylesheets/ie.css" media="screen" rel="stylesheet" type="text/css" />
+  <![endif]--> 
+  <link rel="stylesheet" type="text/css" href="/stylesheets/fixed-width.css" title="Fixed-width"/> 
+  <link href="http://venuedriver.com/stylesheets/stretchy.css" media="all" rel="stylesheet" type="text/css" />
+  
+  <link href="stylesheets/documentation.css" rel="stylesheet" type="text/css">
+  <link href="../stylesheets/documentation.css" rel="stylesheet" type="text/css">
+  <link href="../../stylesheets/documentation.css" rel="stylesheet" type="text/css">
+
+  <link rel="shortcut icon" href="http://venuedriver.com/images/vn_logo_big.ico"> 
+</head>
+
+<body>
+
+  <div id="container" style="width: 950px; margin-left: auto; margin-right: auto;"> 
+
+  <div id="logo"><a href="/updates/index">Venue Driver<span class=""></span></a></div> 
+
+  <div id="content"> 
+
+  <div class="main_body"> 
+  <div id="content_body"> 
+  <div class="full_width">
+   
+  <h3>Get the <span class="caps">HTML</span> for an Event Select Tag</h3>
+<p>Venue Driver provides an <span class="caps">API</span> method that will return <span class="caps">HTML</span> code for an event select box, to be inserted<br />
+directly into a web page.  For example, to get a drop-down select box for all upcoming events at the venue with Venue Driver ID code 1234, you might call a <span class="caps">URL</span> like this:</p>
+<pre>
+<code>
+http://venuedriver.com/api/venues/1234/events/select_tag.html?username=venuesite&amp;password=password
+</code>
+</pre>
+<p>You can test from the command line using the cURL utility:</p>
+<pre>
+<code>
+curl 'http://venuedriver.com/api/venues/129582/events/select_tag.html?username=venuesite&amp;password=password'
+</code>
+</pre>
+<p>It will return something like this:</p>
+<pre>
+<code>
+&lt;select id="event" name="event"&gt;&lt;option value="3768"&gt;Cabaret of Dr. Calagari - Apr 16&lt;/option&gt;
+&lt;option value="3769"&gt;Latin Night and Tequila Party - Apr 17&lt;/option&gt;
+&lt;option value="3859"&gt;Visionshock - International District Spring Roll Party - Apr 24&lt;/option&gt;
+&lt;option value="3860"&gt;Sounders Latin Preparty - Apr 25&lt;/option&gt;
+&lt;option value="3832"&gt;Glamour - May 01&lt;/option&gt;&lt;/select&gt;
+</code>
+</pre>
+<p>Using that resource <span class="caps">URL</span> is pretty simple.  In Ruby for example it looks like this:</p>
+<pre>
+<code>
+url = "http://venuedriver/api/venues/129582/events/select_tag.html?username=venuesite&amp;password=password"
+events_html = Net::HTTP.get_response(URI.parse(url))
+</code>
+</pre>
+<p>Then you can just drop that <span class="caps">HTML</span> snippet into your form with <code>&lt;%= events_html %&gt;</code> or the equivalent in <span class="caps">PHP</span> or whatever.  That gives you a simple way to build a form that can request guest list signup for any upcoming event.</p>
+<p>When somebody submits the form, creating the guest list entry is similarly simple.  It also involves a simple <span class="caps">HTTP</span> query to an <span class="caps">API</span> <span class="caps">URL</span>.  Are you using <span class="caps">PHP</span>?  I can send you an example snippet for doing the post if so.</p>
+
+  </div>
+  </div>
+  </div>
+
+  </div>
+  </div>
+
+</body>
+</html>

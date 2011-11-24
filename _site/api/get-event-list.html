@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>Venue Driver Documentation - Get an Event List for an Account</title>
+
+  <link href="http://venuedriver.com/stylesheets/fonts.css" media="all" rel="stylesheet" type="text/css" /> 
+
+  <link href="http://venuedriver.com/stylesheets/layout.css" media="screen" rel="stylesheet" type="text/css" /> 
+
+  <!--[if IE]>
+  <link href="http://venuedriver.com/stylesheets/ie.css" media="screen" rel="stylesheet" type="text/css" />
+  <![endif]--> 
+  <link rel="stylesheet" type="text/css" href="/stylesheets/fixed-width.css" title="Fixed-width"/> 
+  <link href="http://venuedriver.com/stylesheets/stretchy.css" media="all" rel="stylesheet" type="text/css" />
+  
+  <link href="stylesheets/documentation.css" rel="stylesheet" type="text/css">
+  <link href="../stylesheets/documentation.css" rel="stylesheet" type="text/css">
+  <link href="../../stylesheets/documentation.css" rel="stylesheet" type="text/css">
+
+  <link rel="shortcut icon" href="http://venuedriver.com/images/vn_logo_big.ico"> 
+</head>
+
+<body>
+
+  <div id="container" style="width: 950px; margin-left: auto; margin-right: auto;"> 
+
+  <div id="logo"><a href="/updates/index">Venue Driver<span class=""></span></a></div> 
+
+  <div id="content"> 
+
+  <div class="main_body"> 
+  <div id="content_body"> 
+  <div class="full_width">
+   
+  <h1>Get an event list for a venue</h1>
+<p>You can get an event list for a venue record in Venue Driver if you have a valid login and also the venue ID.  The venue ID is numeric, and you can obtain it through the above venue index method, or you can obtain the ID for your venue from Venue Driver support.  The API&#8217;s /venues resource exposes a nested events resource.  So if you want the events for the venue with ID 1234, then you can get that with:</p>
+<pre>
+<code>
+curl 'http://venuedriver.com/api/venues/1234/events.xml?username=venuesite&amp;password=password'
+</code>
+</pre>
+
+<p>The above will return something like this:</p>
+<pre>
+<code>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;events type="array"&gt;
+  &lt;event&gt;
+    &lt;VIP-URL nil="true"&gt;&lt;/VIP-URL&gt;
+    &lt;active type="boolean" nil="true"&gt;&lt;/active&gt;
+    &lt;ages nil="true"&gt;&lt;/ages&gt;
+    &lt;close type="datetime"&gt;2000-01-01T08:15:00-05:00&lt;/close&gt;
+    &lt;closed-message nil="true"&gt;&lt;/closed-message&gt;
+    &lt;cover nil="true"&gt;&lt;/cover&gt;
+    &lt;created-at type="datetime"&gt;2010-02-09T20:48:10-05:00&lt;/created-at&gt;
+    &lt;date type="date"&gt;2010-03-12&lt;/date&gt;
+    &lt;description nil="true"&gt;&lt;/description&gt;
+    &lt;guestlist-URL nil="true"&gt;&lt;/guestlist-URL&gt;
+    &lt;guestlist-conditions nil="true"&gt;&lt;/guestlist-conditions&gt;
+    &lt;home-URL nil="true"&gt;&lt;/home-URL&gt;
+    &lt;id type="integer"&gt;5635&lt;/id&gt;
+    &lt;myspace-URL nil="true"&gt;&lt;/myspace-URL&gt;
+    &lt;open type="datetime"&gt;2000-01-01T22:30:00-05:00&lt;/open&gt;
+    &lt;tickets-URL nil="true"&gt;&lt;/tickets-URL&gt;
+    &lt;tickets-sold-count type="integer"&gt;0&lt;/tickets-sold-count&gt;
+    &lt;time type="datetime" nil="true"&gt;&lt;/time&gt;
+    &lt;title&gt;Friday Event&lt;/title&gt;
+    &lt;updated-at type="datetime"&gt;2010-03-01T14:42:29-05:00&lt;/updated-at&gt;
+  &lt;/event&gt;
+  &lt;event&gt;
+    &lt;VIP-URL nil="true"&gt;&lt;/VIP-URL&gt;
+    &lt;active type="boolean" nil="true"&gt;&lt;/active&gt;
+    &lt;ages nil="true"&gt;&lt;/ages&gt;
+    &lt;close type="datetime"&gt;2000-01-01T08:15:00-05:00&lt;/close&gt;
+    &lt;closed-message nil="true"&gt;&lt;/closed-message&gt;
+    &lt;cover nil="true"&gt;&lt;/cover&gt;
+    &lt;created-at type="datetime"&gt;2010-02-09T20:48:35-05:00&lt;/created-at&gt;
+    &lt;date type="date"&gt;2010-03-13&lt;/date&gt;
+    &lt;description nil="true"&gt;&lt;/description&gt;
+    &lt;guestlist-URL nil="true"&gt;&lt;/guestlist-URL&gt;
+    &lt;guestlist-conditions nil="true"&gt;&lt;/guestlist-conditions&gt;
+    &lt;home-URL nil="true"&gt;&lt;/home-URL&gt;
+    &lt;id type="integer"&gt;5636&lt;/id&gt;
+    &lt;myspace-URL nil="true"&gt;&lt;/myspace-URL&gt;
+    &lt;open type="datetime"&gt;2000-01-01T22:00:00-05:00&lt;/open&gt;
+    &lt;tickets-URL nil="true"&gt;&lt;/tickets-URL&gt;
+    &lt;tickets-sold-count type="integer"&gt;0&lt;/tickets-sold-count&gt;
+    &lt;time type="datetime" nil="true"&gt;&lt;/time&gt;
+    &lt;title&gt;Saturday Event&lt;/title&gt;
+    &lt;updated-at type="datetime"&gt;2010-03-01T14:42:29-05:00&lt;/updated-at&gt;
+  &lt;/event&gt;
+&lt;/events&gt;
+</code>
+</pre>
+<p>This <span class="caps">API</span> method can also return data formatted with <span class="caps">JSON</span> instead of <span class="caps">XML</span>, just like the venue index<br />
+method above.  Simply change the file extension in the request <span class="caps">URL</span> from &#8220;.xml&#8221; to &#8220;.json&#8221;:</p>
+<pre>
+<code>
+curl 'http://venuedriver.com/api/venues/1234/events.json?username=venuesite&amp;password=password'
+</code>
+</pre>
+
+  </div>
+  </div>
+  </div>
+
+  </div>
+  </div>
+
+</body>
+</html>
