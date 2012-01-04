@@ -1,0 +1,36 @@
+.ribbon::after, .ribbon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  display: block;
+  background: url('/images/ribbon_sprite.png') repeat-x;
+}
+
+.ribbon::after {
+  background-position: 0px 0px;
+  width: 24px;
+  height: 44px;
+  left: 100%;
+}
+
+.ribbon::before {
+  background-position: 0px -85px;
+  width: 11px;
+  height: 50px;
+  right: 100%;
+}
+
+.ribbon {
+  font-size: 18px !important;
+  font-weight: lighter;
+  font-family: Arial,'sans serif';
+  position: relative;
+  height: 41px;
+  background: url('/images/ribbon_sprite.png') repeat-x;
+  background-position: 0px -44px;
+  padding: .5em .4em;
+  line-height:2em;
+  color:#ffffff;
+  top: 1px;
+  left: -1px;
+}

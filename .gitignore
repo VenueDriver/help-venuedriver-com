@@ -12,4 +12,5 @@ coverage.data
 config/aws.yml
 tmp
 public/cache.manifest
-*~
+_site/
+_site/*.*
