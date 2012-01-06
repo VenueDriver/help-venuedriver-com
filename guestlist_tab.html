@@ -1,55 +1,71 @@
 ---
-layout: standard
+layout: page
 title: Guestlist Tab
 ---
 
-<p><h1>Guestlist Tab</p></h1>
-
-<p>The Guestlist Tab in Venue Driver is where guestlists for a given venue or account are input, managed, and approved by staff members. To access guestlists for a specific event, click the button marked "Lists" next to the event in question. Managers and above are the only staff members that can view guestlists other than their own.</p>
+<div id='top-box'>
+  <span class='ribbon'>Guestlist Tab</span>
+  <p>The Guestlist Tab in Venue Driver is where guestlists for a given venue or account are input, managed, and approved by staff members. To access guestlists for a specific event, click the button marked "Lists" next to the event in question. Managers and above are the only staff members that can view guestlists other than their own.</p>
+</div>
 
 <!-- show guestlist tab. -->
 
 <img src="/images/guestlist_tab.png">
 
-<h2>List of Guestlists</h2>
+<hr/ >
 
-<p><b>Date.</p></b>
+<div class="block white">
 
-<p>The date of the event in question.</p>
+  <h2>List of Guestlists</h2>
 
-<p><b>Event</b></p>
+  <p>
+    <b>Date</b><br />
+    The date of the event in question.
+  </p>
 
-<p>The title of the event</p>
+  <p>
+    <b>Event</b><br />
+    The title of the event.
+  </p>
 
-<p><b>Venue.</p></b>
+  <p>
+    <b>Venue</p><br />
+    Which venue the event is located at.
+  </p>
 
-<p>Which venue the event is located at</p>
+  <p>
+    <b>Public.</b><br />
+    This will determine whether the guestlist can be signed up for via the venue's website. For integration clients only.
+  </p>
 
-<p><b>Public.</b></p>
+  <p>
+    <b>Lists.</b><br />
+    How many guestlists are approved for a given event.
+  </p>
 
-<p>This will determine whether the guestlist can be signed up for via the venue's website. For integration clients only.</p>
+  <p>
+    <b>Guests</b><br />
+    How many approved guests for a given event.
+  </p>
 
-<p><b>Lists.</b></p>
+  <p>
+    <b>Lists Button</b><br />
+    Click this button to see a complete list of the guestlists for a given event.
+  </p>
 
-<p>How many guestlists are approved for a given event.</p>
+  <p>
+    <b>Print Button.</b><br />
+    This will display a new tab in a web browser with a printable list of all approved guests for the evening.
+  </p>
 
-<p><b>Guests</b></p>
+  <p>
+    <b>Print VIP</b><br />
+    This will display a new tab in a web browser with a printable list of all guests designated "VIP".
+  </p>
 
-<p>How many approved guests for a given event</p>
+</div>
 
-<p><b>Lists Button</b></p>
-
-<p>Click this button to see a complete list of the guestlists for a given event</p>
-
-<p><b>Print Button.</b></p>
-
-<p>This will display a new tab in a web browser with a printable list of all approved guests for the evening.</p>
-
-<p><b>Print VIP.</b></p>.
-
-<p>This will display a new tab in a web browser with a printable list of all guests designated "VIP".</p>
-
-<h2>Guestlist Details in an event</h2>
+<h2 class='nm'>Guestlist Details in an event</h2>
 
 <p>List details are accessed by clicking the "Lists" button next to the event in question. The following columns are displayed</p>
 
@@ -57,23 +73,27 @@ title: Guestlist Tab
 
 <img src="/images/guestlist_focus.png">
 
-<p><b>Staff.</b></p>
+<div class="block white">
 
-<p>The staff member that set up the list.</p>
+  <p><b>Staff.</b></p>
 
-<p><b>Guest Count.</b></p>
+  <p>The staff member that set up the list.</p>
 
-<p>The amount of guests in a given guestlist</p>
+  <p><b>Guest Count.</b></p>
 
-<p><b>Closed</b></p>
+  <p>The amount of guests in a given guestlist</p>
 
-<p>Checking this checkbox will close that specific list to further input.</p>
+  <p><b>Closed</b></p>
 
-<p><b>Approved.</b></p>
+  <p>Checking this checkbox will close that specific list to further input.</p>
 
-<p>Checking this checkbox will approve a guestlist and cause it to appear in the iOS app, the web-based checkin, and the printed list.</p>
+  <p><b>Approved.</b></p>
 
-<h2>Creating a new guestlist.</h2>
+  <p>Checking this checkbox will approve a guestlist and cause it to appear in the iOS app, the web-based checkin, and the printed list.</p>
+
+</div>
+
+<h2 class='nm'>Creating a new guestlist.</h2>
 
 <p>To create a new guestlist, click the "Create New" button.</p>
 
@@ -83,17 +103,24 @@ title: Guestlist Tab
 
 <p>Creating a new guestlist will bring up optional fields for managers and above. Promoters can only create an unapproved guestlist with no set conditions.</p>
 
-<p><b>Staff.</b></p>
+<div class="block white">
 
-<p>Managers and above can set to which staff member gets the credit for a guestlist.</p>
+  <p>
+    <b>Staff.</b><br />
+    Managers and above can set to which staff member gets the credit for a guestlist.
+  </p>
 
-<p><b>Conditions.</b></p>
+  <p>
+    <b>Conditions.</b><br />
+    Managers and above can set the conditions on a guestlist. These conditions display on the guestlist portion of the iOS app.
+  </p>
 
-<p>Managers and above can set the conditions on a guestlist. These conditions display on the guestlist portion of the iOS app.</p>
+  <p>
+    <b>Approved.</b><br />
+    Checking this checkbox will approve the guestlist.
+  </p>
 
-<p><b>Approved.</b></p>
-
-<p>Checking this checkbox will approve the guestlist.</p>
+</div>
 
 <h2>Entering Guests.</h2>
 
@@ -103,77 +130,82 @@ title: Guestlist Tab
 
 <img src="/images/add_one_guest.png">
 
-<p><b>Entering guests one by one.</b></p>
+<div class="block white">
 
-<p>To enter guests one by one with every detail, click the "Add New" button. The fields displayed are:</p>
+  <p><b>Entering guests one by one.</b></p>
 
-<p><b>First.</b></p>
+  <p>To enter guests one by one with every detail, click the "Add New" button. The fields displayed are:</p>
 
-<p>The first name of the guest.</p>
+  <p><b>First.</b></p>
 
-<p><b>Last</b></p>
+  <p>The first name of the guest.</p>
 
-<p>The last name of the guest.</p>
+  <p><b>Last</b></p>
 
-<p><b>VIP</b></p>
+  <p>The last name of the guest.</p>
 
-<p>Designates this guest in bold type on web checkin, the iOS app, or the printed list to call attention to that guest.</p>
+  <p><b>VIP</b></p>
 
-<p><b>Extra Guests</b></p>
+  <p>Designates this guest in bold type on web checkin, the iOS app, or the printed list to call attention to that guest.</p>
 
-<p>How many extra guests will be arriving with the named guest.</p>
+  <p><b>Extra Guests</b></p>
 
-<p><b>Phone.</b></p>
+  <p>How many extra guests will be arriving with the named guest.</p>
 
-<p>The phone number, mobile or other wise, of the guest.</p>
+  <p><b>Phone.</b></p>
 
-<p><b>Phone Alternative</b></p>.
+  <p>The phone number, mobile or other wise, of the guest.</p>
 
-<p>An alternate number for the guest if desired.</p>
+  <p><b>Phone Alternative</b></p>.
 
-<p><b>Phone carrier</b></p>
+  <p>An alternate number for the guest if desired.</p>
 
-<p>Reserved for future use.</p>
+  <p><b>Phone carrier</b></p>
 
-<p><b>Email.</b></p>
+  <p>Reserved for future use.</p>
 
-<p>The email of the guest attending.</p>
+  <p><b>Email.</b></p>
 
-<p><b>Notes</b></p>
+  <p>The email of the guest attending.</p>
 
-<p>Any notes about the guest attending. This will show up on the web checkin, iOS app, and printed list.</p>
+  <p><b>Notes</b></p>
 
-<p><b>Signup notes</b></p>
+  <p>Any notes about the guest attending. This will show up on the web checkin, iOS app, and printed list.</p>
 
-<p>Deprecated. Removal slated for a future release</p>
+  <p><b>Signup notes</b></p>
+
+  <p>Deprecated. Removal slated for a future release</p>
+
+</div>
 
 <!-- show Add Many. -->
 
 <img src="/images/add_many.png">
 
-<p><b>Entering guests in bulk.</b></p>
+<div class="block white">
 
-<p>To enter guests in bulk, i.e. via copy-and-paste from an email, click the "Add Many" button.</p>
+  <p><b>Entering guests in bulk.</b></p>
 
-<p><b>Guest entry format.</b></p>
+  <p>To enter guests in bulk, i.e. via copy-and-paste from an email, click the "Add Many" button.</p>
 
-<p>An example:</p>
+  <p><b>Guest entry format.</b></p>
 
-<h3>Sonny Crockett +1 sonny@mdpd.com, Castillo's friend.</h3>
-<h3>Saundra Santiago, Expedite please.</h3>
+  <p>An example:</p>
 
-<p>Venue Driver will parse the above into the guestlist with the names on each line, the +1 entered as a +1 for Sonny Crockett, sonny@mdpd.com as Sonny's email which will appear in the Email field for guest tracking, and "Castillo's Friend" in the Notes column on the guestlist. Please note that large lists of over 100 persons make take a moment or two to parse. Click the "Create" button to enter.</p>
+  <h3>Sonny Crockett +1 sonny@mdpd.com, Castillo's friend.</h3>
+  <h3>Saundra Santiago, Expedite please.</h3>
 
-<h2>Exporting a Guestlist.</h2>
+  <p>Venue Driver will parse the above into the guestlist with the names on each line, the +1 entered as a +1 for Sonny Crockett, sonny@mdpd.com as Sonny's email which will appear in the Email field for guest tracking, and "Castillo's Friend" in the Notes column on the guestlist. Please note that large lists of over 100 persons make take a moment or two to parse. Click the "Create" button to enter.</p>
 
-<p>Managers and above can export the event's guestlist to CSV format for offline manipulation in popular spreadsheet applications such as Open Office Calc, Excel, and Numbers. </p>
+  <h2>Exporting a Guestlist.</h2>
 
+  <p>Managers and above can export the event's guestlist to CSV format for offline manipulation in popular spreadsheet applications such as Open Office Calc, Excel, and Numbers. </p>
+
+</div>
 <!-- show a focus on the export button. -->
 
 <img src="/images/gl_export.png">
 
-
-
-
-<h2><a href="http://help.venuedriver.com/">Return to Table of Contents</a></h2>
-
+<div class='link'>
+  <a class='button' href="http://help.venuedriver.com/">Return to Table of Contents</a>
+</div>

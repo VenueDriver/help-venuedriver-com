@@ -1,15 +1,17 @@
 ---
-layout: standard
+layout: page
 title: Staff Tab
 ---
-
-<p><h1>Staff Tab</h1></p>
-
-<p>The Staff Tab in Venue Driver is where a manager or administrator can view and edit the attributes of their staff, as well as monitor their performance. </p>
+<div id='top-box'>
+  <span class='ribbon'>Staff Tab</span>
+  <p>Staff Tab in Venue Driver is where a manager or administrator can view and edit the attributes of their staff, as well as monitor their performance.</p>
+</div>
 
 <!-- put staff tab screenshot here -->
 
 <img src="/images/staff_tab.png">
+
+<hr/>
 
 <img src="/images/staff_edit.png">
 
@@ -17,62 +19,99 @@ title: Staff Tab
 
 <h2>Editing the user's parameters.</h2>
 
-<p><b>Username</b></p>
+<div class="block white">
 
-<p>This is the username of the venue employee who needs Venue Driver access. This name is unique to the Venue Driver system as a whole. Venue Driver will prompt if the username requested has been taken.</p>
+  <p>
+    <b>Username</b><br />
+    This is the username of the venue employee who needs Venue Driver access. This name is unique to the Venue Driver system as a whole. Venue Driver will prompt if the username requested has been taken.
+  </p>
 
-<p><b>Last</b></p>
+  <p>
+    <b>Last</b><br />
+    This is the user's last (family) name.
+  </p>
 
-<p>This is the user's last (family) name.</p>
+  <p>
+    <b>First</b><br />
+    This is the user's first (given) name. This is a required field.
+  </p>
 
-<p><b>First</b></p>
+  <p>
+    <b>Job Title</b><br />
+    This is the user's   obscription.
+  </p>
 
-<p>This is the user's first (given) name. This is a required field.</p>
+  <p>
+    <b>Email</b><br />
+    This is where t  e r's email is entered. This is a required field and the email must be unique to Venue Driver as a whole. Venue Driver will prompt if the email is in use.
+  </p>
 
-<p><b>Job Title</b></p>
-<p>This is the user's job description.</p>
+  <p>
+    <b>Phone</b><br />
+    The user's phon   ner can be entered here.
+  </p>
 
-<p><b>Email</b></p>
-<p>This is where the user's email is entered. This is a required field and the email must be unique to Venue Driver as a whole. Venue Driver will prompt if the email is in use.</p>
+  <p>
+    <b>Password</b><br />
+    Enter the user's p ssd here. While Venue Driver does not enforce password complexity rules, it is generally good practice to make a password sufficiently complex to deter security issues. For example, "1234" is not a strong password, while "e4nt3rpr1z@" is. Password must be entered twice for verification.
+  </p>
 
-<p><b>Phone</b></p>
-<p>The user's phone number can be entered here.</p>
+  <p>
+    <b>Venues</b><br />
+    A list of venues isesented here, each with a corresponding checkbox. Check off the venues that the user will have access to in terms of viewing and entering information.
+  </p>
 
-<p><b>Password</b></p>
-<p>Enter the user's password here. While Venue Driver does not enforce password complexity rules, it is generally good practice to make a password sufficiently complex to deter security issues. For example, "1234" is not a strong password, while "e4nt3rpr1z@" is. Password must be entered twice for verification.</p>
+  <p>
+    <b>Is Promoter</b><br />
+    This is a checkbox to  asn the access level of Promoter. The access level of Promoter allows the user to input and view his or her own guestlists and VIP table reservations. List and reservation approvals must be done by a manager or above. User can only see his or her own data.
+  </p>
 
-<p><b>Venues</b></p>
-<p>A list of venues is presented here, each with a corresponding checkbox. Check off the venues that the user will have access to in terms of viewing and entering information.</p>
+  <p>
+    <b>Is VIP Host</b><br />
+    This is a checkbox to  asn the access level of VIP Host. The access level of VIP Host allows the user to input his or her own guestlists and VIP reservations. The user has the capability to view not only their own data, but the data of other employees within the venue. The user can only modify his or her own data though. This access level is ideal for a staff member at the door of the venue.
+  </p>
 
-<p><b>Is Promoter</b></p>
-<p>This is a checkbox to assign the access level of Promoter. The access level of Promoter allows the user to input and view his or her own guestlists and VIP table reservations. List and reservation approvals must be done by a manager or above. User can only see his or her own data.</p>
+  <p>
+    <b>Is Manager</b><br />
+    This is a checkbox t  agn the access level of Manager. The access level of Manager allows the user to input his or her own guestlists and reservations, as well as those of other employees (by assigning the guestlist or reservation to a particular staff member) within the venue. Managers can also view ticketing sales and data in the Tickets tab, and customer contact information in the Customers tab. Managers can also create new logins for VIP Hosts and Promoters as well as edit their login details. Managers can also enter performance data for promoters and VIP hosts. 
+  </p>
 
-<p><b>Is VIP Host</b></p>
-<p>This is a checkbox to assign the access level of VIP Host. The access level of VIP Host allows the user to input his or her own guestlists and VIP reservations. The user has the capability to view not only their own data, but the data of other employees within the venue. The user can only modify his or her own data though. This access level is ideal for a staff member at the door of the venue.</p>
+  <p>
+    <b>Is Admin</b><br />
+    This is a checkbox tosign the access level of Admin. The access level of Admin allows the user to input his or her own guestlists and VIP reservations, as well as those of other employees (by assigning the guestlist or reservation to a particular staff member) within the venue. Admins can also create and edit ticket types for ticketed events in the Tickets tab, as well as view, create, and edit customer contact information in the Customers tab. Admins can also create new logins for new Admins, Managers, VIP Hosts, and Promoters, as well as editing their existing login details. Admins can also enter performance data for managers, promoters, and VIP hosts. 
+  </p>
 
-<p><b>Is Manager</b></p>
-<p>This is a checkbox to assign the access level of Manager. The access level of Manager allows the user to input his or her own guestlists and reservations, as well as those of other employees (by assigning the guestlist or reservation to a particular staff member) within the venue. Managers can also view ticketing sales and data in the Tickets tab, and customer contact information in the Customers tab. Managers can also create new logins for VIP Hosts and Promoters as well as edit their login details. Managers can also enter performance data for promoters and VIP hosts. </p>
+  <p>
+    <b>Notify on Guestlists</b><br />
+    This is a checkbox which will  llthe user to receive emails which contain the entire guestlist for an event. Delivered after the guestlist closes for input for the evening, this email will contain the names and notes of the guestlisted customers for the evening's event.
+  </p>
 
-<p><b>Is Admin</b></p>
-<p>This is a checkbox to assign the access level of Admin. The access level of Admin allows the user to input his or her own guestlists and VIP reservations, as well as those of other employees (by assigning the guestlist or reservation to a particular staff member) within the venue. Admins can also create and edit ticket types for ticketed events in the Tickets tab, as well as view, create, and edit customer contact information in the Customers tab. Admins can also create new logins for new Admins, Managers, VIP Hosts, and Promoters, as well as editing their existing login details. Admins can also enter performance data for managers, promoters, and VIP hosts. </p>
+  <p>
+    <b>Notify on Reservations</b><br />
+    This is a checkbox which will al owe user to receive notifications for each approved reservation. This is typically the province of managers and administrators. In high-volume venues, this can result in a massive amount of emails, so this feature should only be used with careful consideration.
+  </p>
 
-<p><b>Notify on Guestlists</b></p>
-<p>This is a checkbox which will allow the user to receive emails which contain the entire guestlist for an event. Delivered after the guestlist closes for input for the evening, this email will contain the names and notes of the guestlisted customers for the evening's event.</p>
+  <p>
+    <b>Notify on Reservation Updates</b><br />
+    This is a checkbox which will allow the  usto receive notifications whenever a reservation is changed or updated. This is typically the province of managers and administrators. In high-volume venues, this can result in a massive amount of emails, so this feature should only be used with careful consideration.
+  </p>
 
-<p><b>Notify on Reservations</b></p>
-<p>This is a checkbox which will allow the user to receive notifications for each approved reservation. This is typically the province of managers and administrators. In high-volume venues, this can result in a massive amount of emails, so this feature should only be used with careful consideration.</p>
+  <p>
+    <b>Notify on Reservation Reminders</b><br />
+    This is a checkbox which will allow the u  er receive reminder notifications approximately an hour before the ability to input reservations for an event is closed for the evening.
+  </p>
 
-<p><b>Notify on Reservation Updates</b></p>
-<p>This is a checkbox which will allow the user to receive notifications whenever a reservation is changed or updated. This is typically the province of managers and administrators. In high-volume venues, this can result in a massive amount of emails, so this feature should only be used with careful consideration.</p>
+  <p>
+    <b>Notify on Reservations Summary</b><br />
+    This is a checkbox which will allow the  seo receive a summary containing all the approved reservations for an event after the time specified that users can no longer input reservations for an event.
+  </p>
 
-<p><b>Notify on Reservation Reminders</b></p>
-<p>This is a checkbox which will allow the user to receive reminder notifications approximately an hour before the ability to input reservations for an event is closed for the evening.</p>
+  <p>
+    <b>Can Access Checkin</b><br />
+    This is a checkbox which wil  aw promoters to specifically access the check-in function either through Venue Driver itself, or the iOS app. Checking this is not required for VIP hosts, Managers, or Admins to have access to check-in functionality.
+  </p>
+</div>
 
-<p><b>Notify on Reservations Summary</b></p>
-<p>This is a checkbox which will allow the user to receive a summary containing all the approved reservations for an event after the time specified that users can no longer input reservations for an event.</p>
-
-<p><b>Can Access Checkin</b></p>
-<p>This is a checkbox which will allow promoters to specifically access the check-in function either through Venue Driver itself, or the iOS app. Checking this is not required for VIP hosts, Managers, or Admins to have access to check-in functionality.</p>
 
 <h2>Viewing user's performance</h2>
 
@@ -82,20 +121,34 @@ title: Staff Tab
 
 <p>Venue Driver allows for the performance of venue staff members to be tracked at a fine level of detail. To access the performance statistics of any staff member, click 'Performance' next to their user name. A graphical breakdown of their performance will then present itself. What each graph and section represents will be detailed below.</p>
 
-<p><b>From:</b></p>
-<p>In this section, the date range can be set for viewing performance. Please note that depending on the date range requested, the data might take a few moments to display.</p>
+<div class='block white'>
 
-<p><b>Pass Statistics</b></p>
-<p>This is where a staff member's pass returns are tracked. A pass is generated in the Events tab for an event, or is also tracked by the Tally function in the iOS app.</p>
+  <p>
+    <b>From:</b><br />
+    In this section   tdate range can be set for viewing performance. Please note that depending on the date range requested, the data might take a few moments to display.
+  </p>
 
-<p><b>Guestlist Performance</b></p>
-<p>This is where a staff member's guestlist returns and performance are tracked. Guestlist returns can either be tracked automatically from the iOS app, the web interface, or input manually after an event in the Events Tab.</p>
+  <p>
+    <b>Pass Statistics</b><br />
+    This is where a staff mem  erpass returns are tracked. A pass is generated in the Events tab for an event, or is also tracked by the Tally function in the iOS app.
+  </p>
 
-<p><b>VIP Table Sales</b></p>
-<p>This is where a staff member's monetary returns for VIP tables are tracked. Returns can be input after an event in the Events Tab.</p>
+  <p>
+    <b>Guestlist Performance</b><br />
+    This is where a staff member's   ueist returns and performance are tracked. Guestlist returns can either be tracked automatically from the iOS app, the web interface, or input manually after an event in the Events Tab.
+  </p>
 
-<p><b>VIP Booked/Showed</b></p>
-<p>This is where a staff member's VIP Booked/Showed ratio can be seen. For example, it can be seen that a staff member has booked 50 reservations for a given time period, but only 10 have shown.</p>
+  <p>
+    <b>VIP Table Sales</b><br />
+    This is where a staff mem  ermonetary returns for VIP tables are tracked. Returns can be input after an event in the Events Tab.
+  </p>
+
+  <p>
+    <b>VIP Booked/Showed</b><br />
+    This is where a staff membe  'sP Booked/Showed ratio can be seen. For example, it can be seen that a staff member has booked 50 reservations for a given time period, but only 10 have shown.
+  </p>
+
+</div>
 
 <h2>Affiliate Codes</h2>
 
@@ -113,4 +166,6 @@ title: Staff Tab
 
 <p>Administrators and managers are allowed to delete users of lesser rank than themselves. Deleting a user removes them from the system but keeps their data intact. However, the data will not be associated with the user since his or her record will no longer exist. Venue Driver recommends instead that when an employee's access needs to be revoked, that his or her password and email are changed, thereby retaining the associations in the account's database.</p>
 
-<h2><a href="http://help.venuedriver.com/">Return to Table of Contents</a></h2>
+<div class='link'>
+  <a class='button' href="http://help.venuedriver.com/">Return to Table of Contents</a>
+</div>
