@@ -1,22 +1,21 @@
 ---
-layout: standard
+layout: page
 title: Get an Event List for an Account
 ---
 
-h1. Get an event list for a venue
+<div id='top-box'>
+  <span class='ribbon'>	Get an event list for a venue</span>
 
-You can get an event list for a venue record in Venue Driver if you have a valid login and also the venue ID.  The venue ID is numeric, and you can obtain it through the above venue index method, or you can obtain the ID for your venue from Venue Driver support.  The API's /venues resource exposes a nested events resource.  So if you want the events for the venue with ID 1234, then you can get that with:
+<p>You can get an event list for a venue record in Venue Driver if you have a valid login and also the venue ID.  The venue ID is numeric, and you can obtain it through the above venue index method, or you can obtain the ID for your venue from Venue Driver support.  The API's /venues resource exposes a nested events resource.  So if you want the events for the venue with ID 1234, then you can get that with:</p>
+</div>
 
-<pre>
-<code>
+<pre class="sh_html">
 curl 'http://venuedriver.com/api/venues/1234/events.xml?username=venuesite&password=password'
-</code>
 </pre>
-  
-The above will return something like this:
+<br/>
+<p>The above will return something like this:</p>
 
-<pre>
-<code>
+<pre class="sh_html">
 <?xml version="1.0" encoding="UTF-8"?>
 <events type="array">
   <event>
@@ -64,14 +63,15 @@ The above will return something like this:
     <updated-at type="datetime">2010-03-01T14:42:29-05:00</updated-at>
   </event>
 </events>
-</code>
 </pre>
+<br/>
+<p>This API method can also return data formatted with JSON instead of XML, just like the venue index
+method above.  Simply change the file extension in the request URL from ".xml" to ".json": </p>
 
-This API method can also return data formatted with JSON instead of XML, just like the venue index
-method above.  Simply change the file extension in the request URL from ".xml" to ".json":
-
-<pre>
-<code>
+<pre class="sh_html">
 curl 'http://venuedriver.com/api/venues/1234/events.json?username=venuesite&password=password'
-</code>
 </pre>
+
+<div class='link'>
+  <a class='button' href="http://help.venuedriver.com/">Return to Table of Contents</a>
+</div>

@@ -1,4 +1,4 @@
-.ribbon::after, .ribbon::before {
+.ribbon::after, .ribbon::before, .ribbon_main::after, .ribbon_main::before {
   content: "";
   position: absolute;
   top: 0;
@@ -6,31 +6,35 @@
   background: url('/images/ribbon_sprite.png') repeat-x;
 }
 
-.ribbon::after {
+.ribbon::after, .ribbon_main::after {
   background-position: 0px 0px;
   width: 24px;
   height: 44px;
   left: 100%;
 }
 
-.ribbon::before {
+.ribbon::before, .ribbon_main::before {
   background-position: 0px -85px;
   width: 11px;
   height: 50px;
   right: 100%;
 }
 
-.ribbon {
-  font-size: 18px !important;
+.ribbon, .ribbon_main {
+  font-size: 22px !important;
   font-weight: lighter;
-  font-family: Arial,'sans serif';
+  font-family: 'centurygothic', 'Arial','sans serif';
   position: relative;
   height: 41px;
   background: url('/images/ribbon_sprite.png') repeat-x;
   background-position: 0px -44px;
-  padding: .5em .4em;
-  line-height:2em;
+  padding: .3em .4em;
   color:#ffffff;
   top: 1px;
   left: -1px;
+}
+
+
+.ribbon_main {
+	left: -18px;
 }

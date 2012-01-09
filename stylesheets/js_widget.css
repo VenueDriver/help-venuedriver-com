@@ -74,9 +74,6 @@ a{
 	clear: both;
 }
 
-.note{
-	font-family: "Century Gothic", "sans-serif", "Arial";
-}
 
 .important { 
   background-color: #ffffff;
@@ -102,9 +99,13 @@ a{
 }
 
 .note li, p{
-	font-size: 15px;
-	color: #4b4843;
-	line-height: 28px;
+  font-size: 16px;
+  font-weight: lighter;
+  color: #3B3D3E;
+  line-height: 25px;
+  text-align: justify;
+  padding: 10px 0px;
+  font-family: 'helvetica', 'arial';
 }
 
 pre{ 
