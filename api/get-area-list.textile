@@ -7,16 +7,13 @@ h1. Get an Area list for a venue
 
 Areas are collections of Tables in Venue Driver.  You can get an Area list for a venue record if you have a valid login and also the venue ID.  The venue ID is numeric, and you can obtain it through the venue index method, or you can obtain the ID for your venue from Venue Driver support.  If you want the Areas for the Venue with ID 1234, then you can get that with:
 
-<pre>
-<code>
+<pre class="sh_html">
 curl 'http://venuedriver.com/api/venues/1234/areas.xml?username=venuesite&password=password'
-</code>
 </pre>
   
 The above will return something like this:
 
-<pre>
-<code>
+<pre class="sh_html">
   <?xml version="1.0" encoding="UTF-8"?>
   <areas type="array">
     <area>
@@ -84,14 +81,13 @@ The above will return something like this:
       <venue-id type="integer">625</venue-id>
     </area>
   </areas>
-</code>
 </pre>
 
+<p>
 This API method can also return data formatted with JSON instead of XML, just like the venue index
 method above.  Simply change the file extension in the request URL from ".xml" to ".json":
+</p>
 
-<pre>
-<code>
+<pre class="sh_html">
 curl 'http://venuedriver.com/api/venues/1234/areas.json?username=venuesite&password=password'
-</code>
 </pre>

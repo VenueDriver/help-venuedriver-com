@@ -5,18 +5,15 @@ title: Get an Table List for a Venue and an Area
 
 h1. Get a Table list for a Venue and an Area
 
-You can get an list of Tables for a given Area within a given Venue record if you have a valid login and also the venue ID and the Area ID.  The venue ID is numeric, and you can obtain it through the venue index method, or you can obtain the ID for your venue from Venue Driver support.  You can obtain the Area ID from the API resource for Areas.  If you want the Tables for the venue with ID 1234 and the Area ID 777, then you can get that with:
+<p>You can get an list of Tables for a given Area within a given Venue record if you have a valid login and also the venue ID and the Area ID.  The venue ID is numeric, and you can obtain it through the venue index method, or you can obtain the ID for your venue from Venue Driver support.  You can obtain the Area ID from the API resource for Areas.  If you want the Tables for the venue with ID 1234 and the Area ID 777, then you can get that with:</p>
 
-<pre>
-<code>
+<pre class="sh_html">
 curl 'http://venuedriver.com/api/venues/1234/areas/777/tables.xml?username=venuesite&password=password'
-</code>
 </pre>
   
 The above will return something like this:
 
-<pre>
-<code>
+<pre class="sh_html">
   <?xml version="1.0" encoding="UTF-8"?>
   <tables type="array">
     <table>
@@ -119,14 +116,11 @@ The above will return something like this:
       <updated-at type="datetime">2010-12-07T17:54:39+00:00</updated-at>
     </table>
   </tables>
-</code>
 </pre>
 
 This API method can also return data formatted with JSON instead of XML, just like the venue index
 method above.  Simply change the file extension in the request URL from ".xml" to ".json":
 
-<pre>
-<code>
+<pre class="sh_html">
 curl 'http://venuedriver.com/api/venues/1234/areas/777/tables.json?username=venuesite&password=password'
-</code>
 </pre>
