@@ -1,11 +1,11 @@
 ---
 layout: standard
-title: Get an Event List for an Account
+title: Get an Event List for a Venue
 ---
 
-h1. Get an event list for a venue
+h1. Get an Event list for a venue
 
-You can get an event list for a venue record in Venue Driver if you have a valid login and also the venue ID.  The venue ID is numeric, and you can obtain it through the above venue index method, or you can obtain the ID for your venue from Venue Driver support.  The API's /venues resource exposes a nested events resource.  So if you want the events for the venue with ID 1234, then you can get that with:
+You can get an Event list for a Venue record in Venue Driver if you have a valid login and also the venue ID.  The venue ID is numeric, and you can obtain it through the venue index method, or you can obtain the ID for your venue from Venue Driver support.  The API's /venues resource exposes a nested events resource.  So if you want the events for the venue with ID 1234, then you can get that with:
 
 <pre>
 <code>

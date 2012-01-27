@@ -1,0 +1,132 @@
+---
+layout: standard
+title: Get an Table List for a Venue and an Area
+---
+
+h1. Get a Table list for a Venue and an Area
+
+You can get an list of Tables for a given Area within a given Venue record if you have a valid login and also the venue ID and the Area ID.  The venue ID is numeric, and you can obtain it through the venue index method, or you can obtain the ID for your venue from Venue Driver support.  You can obtain the Area ID from the API resource for Areas.  If you want the Tables for the venue with ID 1234 and the Area ID 777, then you can get that with:
+
+<pre>
+<code>
+curl 'http://venuedriver.com/api/venues/1234/areas/777/tables.xml?username=venuesite&password=password'
+</code>
+</pre>
+  
+The above will return something like this:
+
+<pre>
+<code>
+  <?xml version="1.0" encoding="UTF-8"?>
+  <tables type="array">
+    <table>
+      <area-id type="integer">777</area-id>
+      <created-at type="datetime">2010-12-06T20:26:37+00:00</created-at>
+      <current-reservation-id type="integer">217093</current-reservation-id>
+      <hold type="boolean" nil="true"></hold>
+      <id type="integer">4341</id>
+      <title>30</title>
+      <updated-at type="datetime">2011-07-07T20:31:59+00:00</updated-at>
+    </table>
+    <table>
+      <area-id type="integer">777</area-id>
+      <created-at type="datetime">2010-12-06T20:26:37+00:00</created-at>
+      <current-reservation-id type="integer">216402</current-reservation-id>
+      <hold type="boolean" nil="true"></hold>
+      <id type="integer">4342</id>
+      <title>31</title>
+      <updated-at type="datetime">2011-07-09T23:24:19+00:00</updated-at>
+    </table>
+    <table>
+      <area-id type="integer">777</area-id>
+      <created-at type="datetime">2010-12-06T20:26:37+00:00</created-at>
+      <current-reservation-id type="integer" nil="true"></current-reservation-id>
+      <hold type="boolean" nil="true"></hold>
+      <id type="integer">4343</id>
+      <title>32</title>
+      <updated-at type="datetime">2010-12-06T20:26:37+00:00</updated-at>
+    </table>
+    <table>
+      <area-id type="integer">777</area-id>
+      <created-at type="datetime">2010-12-06T20:26:37+00:00</created-at>
+      <current-reservation-id type="integer" nil="true"></current-reservation-id>
+      <hold type="boolean" nil="true"></hold>
+      <id type="integer">4339</id>
+      <title>33</title>
+      <updated-at type="datetime">2011-07-27T19:50:27+00:00</updated-at>
+    </table>
+    <table>
+      <area-id type="integer">777</area-id>
+      <created-at type="datetime">2010-12-06T20:26:37+00:00</created-at>
+      <current-reservation-id type="integer">219129</current-reservation-id>
+      <hold type="boolean" nil="true"></hold>
+      <id type="integer">4340</id>
+      <title>34</title>
+      <updated-at type="datetime">2011-07-09T23:16:45+00:00</updated-at>
+    </table>
+    <table>
+      <area-id type="integer">777</area-id>
+      <created-at type="datetime">2010-12-06T20:26:37+00:00</created-at>
+      <current-reservation-id type="integer">217986</current-reservation-id>
+      <hold type="boolean" nil="true"></hold>
+      <id type="integer">4344</id>
+      <title>35</title>
+      <updated-at type="datetime">2011-07-15T23:34:27+00:00</updated-at>
+    </table>
+    <table>
+      <area-id type="integer">777</area-id>
+      <created-at type="datetime">2010-12-06T20:26:37+00:00</created-at>
+      <current-reservation-id type="integer">213709</current-reservation-id>
+      <hold type="boolean" nil="true"></hold>
+      <id type="integer">4338</id>
+      <title>36</title>
+      <updated-at type="datetime">2011-07-01T23:25:08+00:00</updated-at>
+    </table>
+    <table>
+      <area-id type="integer">777</area-id>
+      <created-at type="datetime">2010-12-07T17:54:39+00:00</created-at>
+      <current-reservation-id type="integer">217886</current-reservation-id>
+      <hold type="boolean" nil="true"></hold>
+      <id type="integer">4358</id>
+      <title>51</title>
+      <updated-at type="datetime">2011-07-09T23:50:04+00:00</updated-at>
+    </table>
+    <table>
+      <area-id type="integer">777</area-id>
+      <created-at type="datetime">2010-12-07T17:54:39+00:00</created-at>
+      <current-reservation-id type="integer" nil="true"></current-reservation-id>
+      <hold type="boolean" nil="true"></hold>
+      <id type="integer">4360</id>
+      <title>52</title>
+      <updated-at type="datetime">2010-12-07T17:54:39+00:00</updated-at>
+    </table>
+    <table>
+      <area-id type="integer">777</area-id>
+      <created-at type="datetime">2010-12-07T17:54:39+00:00</created-at>
+      <current-reservation-id type="integer" nil="true"></current-reservation-id>
+      <hold type="boolean" nil="true"></hold>
+      <id type="integer">4357</id>
+      <title>53</title>
+      <updated-at type="datetime">2010-12-07T17:54:39+00:00</updated-at>
+    </table>
+    <table>
+      <area-id type="integer">777</area-id>
+      <created-at type="datetime">2010-12-07T17:54:39+00:00</created-at>
+      <current-reservation-id type="integer" nil="true"></current-reservation-id>
+      <hold type="boolean" nil="true"></hold>
+      <id type="integer">4359</id>
+      <title>54</title>
+      <updated-at type="datetime">2010-12-07T17:54:39+00:00</updated-at>
+    </table>
+  </tables>
+</code>
+</pre>
+
+This API method can also return data formatted with JSON instead of XML, just like the venue index
+method above.  Simply change the file extension in the request URL from ".xml" to ".json":
+
+<pre>
+<code>
+curl 'http://venuedriver.com/api/venues/1234/areas/777/tables.json?username=venuesite&password=password'
+</code>
+</pre>
