@@ -10,8 +10,8 @@ Areas are collections of Tables in Venue Driver.  You can get an Area list for a
 <pre class="sh_html">
 curl 'http://venuedriver.com/api/venues/1234/areas.xml?username=venuesite&password=password'
 </pre>
-  
-The above will return something like this:
+<br/>
+<p>The above will return something like this:</p>
 
 <pre class="sh_html">
   <?xml version="1.0" encoding="UTF-8"?>
