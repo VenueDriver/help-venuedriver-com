@@ -1,5 +1,5 @@
 ---
-layout: standard
+layout: page
 title: Get an Area List for a Venue
 ---
 
