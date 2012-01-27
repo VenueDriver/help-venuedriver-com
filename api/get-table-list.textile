@@ -3,9 +3,11 @@ layout: page
 title: Get an Table List for a Venue and an Area
 ---
 
-h1. Get a Table list for a Venue and an Area
+<div id='top-box'>
+  <span class='ribbon'>Get a Table list for a Venue and an Area</span>
 
 <p>You can get an list of Tables for a given Area within a given Venue record if you have a valid login and also the venue ID and the Area ID.  The venue ID is numeric, and you can obtain it through the venue index method, or you can obtain the ID for your venue from Venue Driver support.  You can obtain the Area ID from the API resource for Areas.  If you want the Tables for the venue with ID 1234 and the Area ID 777, then you can get that with:</p>
+</div>
 
 <pre class="sh_html">
 curl 'http://venuedriver.com/api/venues/1234/areas/777/tables.xml?username=venuesite&password=password'
