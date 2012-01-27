@@ -1,2 +1,16 @@
+.bundle
+log
+db/schema.rb
+db/*.sqlite3
+design
+*.DS_Store
+cache
+coverage
+coverage.data
 .rvmrc
-_site
+.project
+config/aws.yml
+tmp
+public/cache.manifest
+_site/
+_site/*.*

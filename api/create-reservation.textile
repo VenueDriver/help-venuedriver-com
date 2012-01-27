@@ -1,22 +1,20 @@
 ---
-layout: standard
+layout: page
 title: Create a Reservation
 ---
 
-h1. Create a reservation
+<div id='top-box'>
+  <span class='ribbon'>	Create a reservation</span>
+<p>Create a reservation in Venue Driver by posting a reservation record with the proper event_id to http://venuedriver.com/api/reservations, as in this example:</p>
+</div>
 
-Create a reservation in Venue Driver by posting a reservation record with the proper event_id to http://venuedriver.com/api/reservations, as in this example:
-
-<pre>
-<code>
+<pre class="sh_html">
   curl -i -H "Accept: application/json" -X POST -d "event_id=1840479691&reservation[first]=test&reservation[last]=test&reservation[phone]=5555555&reservation[email]=test@test.com" "http://venuedriver.com/api/reservations?username=venuesite&password=password"
-</code>
 </pre>
+<br/>
+<p>When successful, the above query will return a JSON representation of the new reservation:</p>
 
-When successful, the above query will return a JSON representation of the new reservation:
-
-<pre>
-<code>
+<pre class="sh_html">
 HTTP/1.1 200 OK
 Connection: close
 Date: Tue, 25 May 2010 18:25:22 GMT
@@ -31,5 +29,8 @@ Server: Mongrel 1.1.5
 Cache-Control: private, max-age=0, must-revalidate
 
 {"city":null,"checkin_time":null,"checked_in":null,"address1":null,"zip":null,"created_at":"2010/05/25 14:25:23 -0400","confirmation":null,"address2":null,"staff_id":null,"event_id":1840479691,"customer_notes":null,"country":null,"company_name":null,"updated_at":"2010/05/25 14:25:23 -0400","table_id":null,"notes":null,"gratuity":null,"table_number":null,"signup_notes":null,"minimum_currency":null,"last":"test","area_id":null,"actual_paid_bottles":null,"account_id":null,"total_spend":null,"id":2132434459,"approved":null,"actual_comp_bottles":null,"phone":"5555555","guests":null,"first":"test","walkup":false,"total_returns":null,"phone_alternative":null,"paid_bottles":null,"event_notes":null,"date_of_birth":null,"seated_table_id":null,"phone_hash":"5555555","phone_carrier":null,"comp_bottles":null,"state":null,"email":"test@test.com","host_name":"[not assigned]","bottles_both":"0"}
-</code>
 </pre>
+
+<div class='link'>
+  <a class='button' href="http://help.venuedriver.com/">Return to Table of Contents</a>
+</div>

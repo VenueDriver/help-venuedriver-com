@@ -1,5 +1,4 @@
-This is the Git repository that contains the content for help.venuedriver.com.  The content
-is structured for a Ruby-based static HTML pre-processor called Jekyll.
+This is the Git repository that contains the content for help.venuedriver.com.  The content is structured for a Ruby-based static HTML pre-processor called Jekyll.
 
 To get the project:
 ===================

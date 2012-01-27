@@ -10,36 +10,33 @@
   <link href="http://venuedriver.com/stylesheets/fonts.css" media="all" rel="stylesheet" type="text/css" /> 
 
   <link href="http://venuedriver.com/stylesheets/layout.css" media="screen" rel="stylesheet" type="text/css" /> 
+  <link href="http://venuedriver.com/stylesheets/js_widget.css" media="screen" rel="stylesheet" type="text/css" /> 
 
   <!--[if IE]>
   <link href="http://venuedriver.com/stylesheets/ie.css" media="screen" rel="stylesheet" type="text/css" />
   <![endif]--> 
   <link rel="stylesheet" type="text/css" href="/stylesheets/fixed-width.css" title="Fixed-width"/> 
+  <link href="http://venuedriver.com/stylesheets/stretchy.css" media="all" rel="stylesheet" type="text/css" />
   
-  <link href="stylesheets/documentation.css" rel="stylesheet" type="text/css">
-  <link href="../stylesheets/documentation.css" rel="stylesheet" type="text/css">
-  <link href="../../stylesheets/documentation.css" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/sh_styles.css" rel="stylesheet" type="text/css"> 
   <link href="/stylesheets/ribbon.css" rel="stylesheet" type="text/css"> 
 
+  <script language="javascript" src="/javascripts/sh_main.min.js" /></script>
+  <script language="javascript" src="/javascripts/sh_html.js" /></script>
+
+  <link href="/stylesheets/documentation.css" rel="stylesheet" type="text/css">
   <link rel="shortcut icon" href="http://venuedriver.com/images/vn_logo_big.ico"> 
 </head>
 
-<body>
+<body onload="sh_highlightDocument()">
 
   <div id="container" style="width: 950px; margin-left: auto; margin-right: auto;"> 
 
   <div id="logo"><a href="/updates/index">Venue Driver<span class=""></span></a></div> 
 
+  <div id="main_content"> 
 
-  <div class="main_body"> 
-  <div id="content_body"> 
-  <div class="full_width">
-   
   {{ content }}
-
-  </div>
-  </div>
-  </div>
 
   </div>
   </div>

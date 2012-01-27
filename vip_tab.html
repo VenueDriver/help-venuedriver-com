@@ -1,172 +1,222 @@
 ---
-layout: standard
+layout: page
 title: VIP Tab
 ---
 
-<p><h1>VIP/Reservations Tab</p></h1>
-
-<p>The VIP/Reservations tab in Venue Driver is where reservations are input, managed, and approved by staff members of a venue or organization. To access reservations for a specific event, click the "Reservations" button next to the event in question. Managers and above are the only staff members that can view reservations other than their own.</p>
+<div id='top-box'>
+  <span class='ribbon'>VIP/Reservations Tab</span>
+  <p>The VIP/Reservations tab in Venue Driver is where reservations are input, managed, and approved by staff members of a venue or organization. To access reservations for a specific event, click the "Reservations" button next to the event in question. Managers and above are the only staff members that can view reservations other than their own.</p>
+</div>
 
 <!-- show VIP tab. -->
+<div id="images">
+  <img src="/images/vip_tab.png">
+</div>
+<hr />
 
-<img src="/images/vip_tab.png">
-
-<h2>Reservations list</h2>.
+<h2>Reservations list</h2>
 
 <p>Clicking on the Reservations button will display a list of the reservations for a given event. The columns, from left to right, are defined below. All fields except for Specific Table, Specific Area, Booked By, First, and Last are inline editable. </p>
 
 <!-- show Reservations list. -->
+<div id="images">
+  <img src="/images/reservations.png">
+</div>
 
-<img src="/images/reservations.png">
+<div class="block white um">
 
-<p><b>Specific Table</b></p>
+  <p>
+    <b>Specific Table</b><br />
+    The specific table the guest is sat at.
+  </p>
 
-<p>The specific table the guest is sat at.</p>
+  <p>
+    <b>Seating Area</b><br />
+    The specific area a guest is in.
+  </p>
 
-<p><b>Seating Area.</b></p>
+  <p>
+    <b>First</b><br />
+    The first name of the guest.
+  </p>
 
-<p>The specific area a guest is in.</p>
+  <p>
+    <b>Last</b><br />
+    The last name of the guest.
+  </p>
 
-<p><b>First</b></p>
+  <p>
+    <b>Guests</b><br/>
+    The amount of guests for a given reservation.
+  </p>
 
-<p>The first name of the guest.</p>
+  <p>
+    <b>Paid Bottles</b><br />
+    The amount of paid bottles in a reservation.
+  </p>
 
-<p><b>Last</b></p>
+  <p>
+    <b>Comp Bottles</b><br />
+    The amount of comp (free) bottles in a reservation.
+  </p>
 
-<p>The last name of the guest.</p>
+  <p>
+    <b>Minimum Spend</b><br />
+    The minimum amount of money a guest is to spend in a reservation.
+  </p>
 
-<p><b>Guests</b></p>
+  <p>
+    <b>Booked By</b><br />
+    The name of the staff member who booked a VIP reservation.
+  </p>
 
-<p>The amount of guests for a given reservation.</p>
+  <p>
+    <b>Approved</b><br />
+    This checkbox signifies whether a reservation has been approved. Only managers and administrators can approve reservations.
+  </p>
 
-<p><b>Paid Bottles.</b></p>
+</div>
 
-<p>The amount of paid bottles in a reservation.</p>
-
-<p><b>Comp Bottles.</b></p>
-
-<p>The amount of comp (free) bottles in a reservation.</p>
-
-<p><b>Minimum Spend.</b></p>
-
-<p>The minimum amount of money a guest is to spend in a reservation.</p>
-
-<p><b>Booked By</b></p>
-
-<p>The name of the staff member who booked a VIP reservation.</p>
-
-<p><b>Approved</b></p>
-
-<p>This checkbox signifies whether a reservation has been approved. Only managers and administrators can approve reservations.</p>
+<hr />
 
 <h2>Creating/editing Reservations</h2>
 
-<p>Clicking on the "Edit" button next to a reservation or the "Create New" button will bring up the dialog to create or modify a reservation. The fields and their purpose will be detailed below</p>.
+<p>Clicking on the "Edit" button next to a reservation or the "Create New" button will bring up the dialog to create or modify a reservation. The fields and their purpose will be detailed below.</p>
 
 <!-- show an example reservation. -->
+<div id="images">
+  <img src="/images/res_example.png">
+</div>
+<div class="block white um">
 
-<img src="/images/res_example.png">
+  <p>
+    <b>First</b><br />
+    The first name of the guest
+  </p>
 
-<p><b>First</b></p>
+  <p>
+    <b>Last</b><br />
+    The last name of the guest.
+  </p>
 
-<p>The first name of the guest</p>
+  <p>
+    <b>Phone number</b><br />
+    The phone number of the guest. This is one of two pieces of unique data that can be entered to create an individual customer record in the Customers tab.
+  </p>
 
-<p><b>Last</b></p>
+  <p>
+    <b>Phone alternative</b><br />
+    An alternative phone number for a guest.
+  </p>
 
-<p>The last name of the guest.</p>
+  <p>
+    <b>Phone carrier</b><br />
+    For future use.
+  </p>
 
-<p><b>Phone number.</b></p>
+  <p>
+    <b>Email</b><br />
+    The email address of a guest. This is the other piece of unique data that can be entered to create an individual customer record in the Customers tab. If an email is provided, the guest will be notified upon reservation approval.
+  </p>
 
-<p>The phone number of the guest. This is one of two pieces of unique data that can be entered to create an individual customer record in the Customers tab.</p>
+  <p>
+    <b>Date of Birth</b><br />
+    The birthday of the guest, if applicable.
+  </p>
 
-<p><b>Phone alternative.</b></p>
+  <p>
+    <b>Guests</b><br />
+    The amount of guests with the reservation.
+  </p>
 
-<p>An alternative phone number for a guest.</p>
+  <p>
+    <b>Company Name</b><br />
+    This is where the name of a company would be entered in the case of a corporate client.
+  </p>
 
-<p><b>Phone carrier</b></p>
+  <p>
+    <b>Booked By</b><br />
+    Visible only to Managers and above, this is where any staff member can be credited to a reservation.
+  </p>
 
-<p>For future use.</p>
+  <p>
+    <b>Event</b><br />
+    A reservation can be reassigned to a future event by a Manager or above if required, using this drop-down menu.
+  </p>
 
-<p><b>Email.</b></p>
+  <p>
+    <b>Seating Area</b><br />
+    Which seating area a reservation is assigned to.
+  </p>
 
-<p>The email address of a guest. This is the other piece of unique data that can be entered to create an individual customer record in the Customers tab. If an email is provided, the guest will be notified upon reservation approval.</p>
+  <p>
+    <b>Specific Table</b><br />
+    Which table in a given area a reservation is assigned to.
+  </p>
 
-<p><b>Date of Birth</b></p>
+  <p>
+    <b>Arrival Time</b><br />
+    When a guest is scheduled to arrive. Useful for venues that book multiple reservations per table in a given evening.
+  </p>
 
-<p>The birthday of the guest, if applicable.</p>
+  <p>
+    <b>Paid Bottles</b><br />
+    How many paid bottles a given reservation is obligated to purchase.
+  </p>
 
-<p><b>Guests</b></p>
+  <p>
+    <b>Comp Bottles</b><br />
+    How many comp (free) bottles a reservation is entitled to.
+  </p>
 
-<p>The amount of guests with the reservation.</p>
+  <p>
+    <b>Minimum Spend</b><br/>
+    How much a guest is obliged to spend for the reservation to be honored.
+  </p>
 
-<p><b>Company Name</b></p>
+  <p>
+    <b>Confirmation #</b><br />
+    A confirmation number from an external source, such as a credit card processing terminal or POS system.
+  </p>
 
-<p>This is where the name of a company would be entered in the case of a corporate client.</p>
+  <p>
+    <b>Notes</b><br />
+    Any notes about a reservation that a door host would need to see visible in the web check-in or the iPad.
+  </p>
 
-<p><b>Booked By</b></p>
+  <p>
+    <b>Signup Notes</b><br />
+    Deprecated. Slated for removal.
+  </p>
 
-<p>Visible only to Managers and above, this is where any staff member can be credited to a reservation.</p>
+  <p>
+    <b>Check Number</b><br/>
+    The check number from a POS system. Can be input manually or in the future by an automated process to be determined.
+  </p>
 
-<p><b>Event.</b></p>
+  <p>
+    <b>Created At</b><br />
+    When a reservation was created. Time is in UTC.
+  </p>
 
-<p>A reservation can be reassigned to a future event by a Manager or above if required, using this drop-down menu.</p>
+  <p>
+    <b>Updated At</b><br />
+    When a reservation was last updated
+  </p>
 
-<p><b>Seating Area.</b></p>
+  <p>
+    <b>Reason</b><br />
+    A manager or above can list his or her reasons for updating a reservation here, so the staff member who initially booked the reservation can be notified of any changes via email.
+  </p>
 
-<p>Which seating area a reservation is assigned to.</p>
+  <p>
+    <b>Approved</b><br />
+    A manager or above can check this checkbox to approve a reservation.
+  </p>
 
-<p><b>Specific Table</b></p>
+</div>
 
-<p>Which table in a given area a reservation is assigned to.</p>
-
-<p><b>Arrival Time.</b></p>
-
-<p>When a guest is scheduled to arrive. Useful for venues that book multiple reservations per table in a given evening.</p>
-
-<p><b>Paid Bottles</b></p>
-
-<p>How many paid bottles a given reservation is obligated to purchase</p>.
-
-<p><b>Comp Bottles</b></p>
-
-<p>How many comp (free) bottles a reservation is entitled to.</p>
-
-<p><b>Minimum Spend</b></p>
-
-<p>How much a guest is obliged to spend for the reservation to be honored.</p>
-
-<p><b>Confirmation #</b></p>
-
-<p>A confirmation number from an external source, such as a credit card processing terminal or POS system.</p>
-
-<p><b>Notes.</b></p>
-
-<p>Any notes about a reservation that a door host would need to see visible in the web check-in or the iPad.</p>
-
-<p><b>Signup Notes</b></p>
-
-<p>Deprecated. Slated for removal.</p>
-
-<p><b>Check Number.</b></p>
-
-<p>The check number from a POS system. Can be input manually or in the future by an automated process to be determined.</p>
-
-<p><b>Created At</p></b>
-
-<p>When a reservation was created. Time is in UTC.</p>
-
-<p><b>Updated At</b></p>
-
-<p>When a reservation was last updated</p>
-
-<p><b>Reason</b></p>
-
-<p>A manager or above can list his or her reasons for updating a reservation here, so the staff member who initially booked the reservation can be notified of any changes via email.</p>
-
-<p><b>Approved.</b></p>
-
-<p>A manager or above can check this checkbox to approve a reservation.</p>
-
+<hr />
 
 <h2>Approving All Reservations and Exporting</h2>
 
@@ -174,6 +224,7 @@ title: VIP Tab
 
 <img src="/images/vip_export.png">
 
-<p>Venue Driver allows for a manager or above to bulk approve all reservations in a given event by clicking the "Approve All" button. Reservations can also be exported by a manager or above to CSV format by clicking the "Export" button. CSV is a standard format which popular spreadsheet applications like Open Office Calc, Excel, and Numbers can easily convert and read. </p>
-
-<h2><a href="http://help.venuedriver.com/">Return to Table of Contents</a></h2>
+<p span class = "padding">Venue Driver allows for a manager or above to bulk approve all reservations in a given event by clicking the "Approve All" button. Reservations can also be exported by a manager or above to CSV format by clicking the "Export" button. CSV is a standard format which popular spreadsheet applications like Open Office Calc, Excel, and Numbers can easily convert and read. </p>
+<div class='link'>
+  <a class='button' href="http://help.venuedriver.com/">Return to Table of Contents</a>
+</div>
