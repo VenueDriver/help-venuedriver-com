@@ -73,10 +73,7 @@ curl 'http://venuedriver.com/api/venues/1234/events.json?username=venuesite&pass
 </pre>
 
 <br/>
-This API action also supports <a href="http://en.wikipedia.org/wiki/JSONP">JSONP</a>, if you're trying to
-access the API from JavaScript in your web site.  Simply add a "callback" parameter, and the result will
-be wrapped in a standard JSONP response format with that callback name.  jQuery will handle this for you
-automatically through the <a href="http://api.jquery.com/jQuery.getJSON/">jQuery.getJSON()</a> function.
+This API action also supports <a href="http://en.wikipedia.org/wiki/JSONP">JSONP</a>, if you're trying to access the API from JavaScript in your web site.  Simply add a "callback" parameter, and the result will be wrapped in a standard JSONP response format with that callback name.  jQuery will handle this for you automatically through the <a href="http://api.jquery.com/jQuery.getJSON/">jQuery.getJSON()</a> function.
 
 <div class='link'>
   <a class='button' href="http://help.venuedriver.com/">Return to Table of Contents</a>
