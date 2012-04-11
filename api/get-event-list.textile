@@ -10,7 +10,7 @@ title: Get an Event List for a Venue
 </div>
 
 <pre class="sh_html">
-curl 'http://venuedriver.com/api/venues/1234/events.xml?username=venuesite&password=password'
+curl 'http://www.venuedriver.com/api/venues/1234/events.xml?username=venuesite&password=password'
 </pre>
 <br/>
 <p>The above will return something like this:</p>
@@ -69,7 +69,7 @@ curl 'http://venuedriver.com/api/venues/1234/events.xml?username=venuesite&passw
 method above.  Simply change the file extension in the request URL from ".xml" to ".json": </p>
 
 <pre class="sh_html">
-curl 'http://venuedriver.com/api/venues/1234/events.json?username=venuesite&password=password'
+curl 'http://www.venuedriver.com/api/venues/1234/events.json?username=venuesite&password=password'
 </pre>
 
 <br/>

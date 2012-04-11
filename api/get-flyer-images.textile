@@ -10,7 +10,7 @@ title: Get Flyer Images for an Event
 </div>
 
 <pre class="sh_html">
-  curl 'http://venuedriver.com/api/venues/1234/events/5678/flyers.xml?username=venuesite&password=password'
+  curl 'http://www.venuedriver.com/api/venues/1234/events/5678/flyers.xml?username=venuesite&password=password'
 </pre>
 <br/>
 <p>The above will return the list of flyers for the event 5678:</p>

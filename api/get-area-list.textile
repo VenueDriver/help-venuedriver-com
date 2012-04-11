@@ -12,7 +12,7 @@ Areas are collections of Tables in Venue Driver.  You can get an Area list for a
 </div>
 
 <pre class="sh_html">
-curl 'http://venuedriver.com/api/venues/1234/areas.xml?username=venuesite&password=password'
+curl 'http://www.venuedriver.com/api/venues/1234/areas.xml?username=venuesite&password=password'
 </pre>
 <br/>
 <p>The above will return something like this:</p>
@@ -93,5 +93,5 @@ method above.  Simply change the file extension in the request URL from ".xml" t
 </p>
 
 <pre class="sh_html">
-curl 'http://venuedriver.com/api/venues/1234/areas.json?username=venuesite&password=password'
+curl 'http://www.venuedriver.com/api/venues/1234/areas.json?username=venuesite&password=password'
 </pre>

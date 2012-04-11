@@ -10,7 +10,7 @@ title: Get an Table List for a Venue and an Area
 </div>
 
 <pre class="sh_html">
-curl 'http://venuedriver.com/api/venues/1234/areas/777/tables.xml?username=venuesite&password=password'
+curl 'http://www.venuedriver.com/api/venues/1234/areas/777/tables.xml?username=venuesite&password=password'
 </pre>
 <br/>
 <p>The above will return something like this:</p>
@@ -124,5 +124,5 @@ This API method can also return data formatted with JSON instead of XML, just li
 method above.  Simply change the file extension in the request URL from ".xml" to ".json":
 
 <pre class="sh_html">
-curl 'http://venuedriver.com/api/venues/1234/areas/777/tables.json?username=venuesite&password=password'
+curl 'http://www.venuedriver.com/api/venues/1234/areas/777/tables.json?username=venuesite&password=password'
 </pre>

@@ -13,7 +13,7 @@ If you're only dealing with one venue then you don't need to use the API to obta
 If you need to obtain a list of venues for an account, then you will need the account ID, which you can obtain from Venue Driver support.  Then use that account ID to request a list of venues for that account:
 
 <pre class="sh_html">
-curl 'http://venuedriver.com/api/accounts/1234/venues.xml?username=venuesite&password=password'
+curl 'http://www.venuedriver.com/api/accounts/1234/venues.xml?username=venuesite&password=password'
 </pre>
 <br/>
 Replace the number '1234' in the above example with your account ID, and replace the username and password with your authentication information.
@@ -111,7 +111,7 @@ The above will return something like this:
 You can also request the same information with JSON formatting instead of XML, like this:
 
 <pre class="sh_html">
-curl 'http://venuedriver.com/api/accounts/1234/venues.json?username=venuesite&password=password'
+curl 'http://www.venuedriver.com/api/accounts/1234/venues.json?username=venuesite&password=password'
 </pre>
 
 <br/>

@@ -9,13 +9,13 @@ title: Get the HTML for an Event Select Tag
 </div>
 
 <pre class="sh_html">
-http://venuedriver.com/api/venues/1234/events/select_tag.html?username=venuesite&password=password
+http://www.venuedriver.com/api/venues/1234/events/select_tag.html?username=venuesite&password=password
 </pre>
 <br/>
 <p>You can test from the command line using the cURL utility:</p>
 
 <pre class="sh_html">
-curl 'http://venuedriver.com/api/venues/129582/events/select_tag.html?username=venuesite&password=password'
+curl 'http://www.venuedriver.com/api/venues/129582/events/select_tag.html?username=venuesite&password=password'
 </pre>
 <br/>
 <p>It will return something like this:</p>

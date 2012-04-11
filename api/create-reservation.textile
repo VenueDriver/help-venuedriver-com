@@ -5,11 +5,11 @@ title: Create a Reservation
 
 <div id='top-box'>
   <span class='ribbon'>	Create a reservation</span>
-<p>Create a reservation in Venue Driver by posting a reservation record with the proper event_id to http://venuedriver.com/api/reservations, as in this example:</p>
+<p>Create a reservation in Venue Driver by posting a reservation record with the proper event_id to http://www.venuedriver.com/api/reservations, as in this example:</p>
 </div>
 
 <pre class="sh_html">
-  curl -i -H "Accept: application/json" -X POST -d "event_id=1840479691&reservation[first]=test&reservation[last]=test&reservation[phone]=5555555&reservation[email]=test@test.com" "http://venuedriver.com/api/reservations?username=venuesite&password=password"
+  curl -i -H "Accept: application/json" -X POST -d "event_id=1840479691&reservation[first]=test&reservation[last]=test&reservation[phone]=5555555&reservation[email]=test@test.com" "http://www.venuedriver.com/api/reservations?username=venuesite&password=password"
 </pre>
 <br/>
 <p>When successful, the above query will return a JSON representation of the new reservation:</p>
