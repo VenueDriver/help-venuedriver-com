@@ -143,6 +143,7 @@ pre{
 	font-size: 13px;
 	padding: 10px;
 	background-color: #000000 !important;
+  overflow: scroll;
 }
 
 img{
@@ -273,8 +274,4 @@ p {
 
 #help_code {
 	width: 700px;
-}
-
-pre.sh_sourceCode {
-  overflow: scroll;
 }
