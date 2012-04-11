@@ -274,3 +274,7 @@ p {
 #help_code {
 	width: 700px;
 }
+
+pre.sh_sourceCode {
+  overflow: scroll;
+}
