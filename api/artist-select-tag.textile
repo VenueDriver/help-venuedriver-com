@@ -1,0 +1,46 @@
+---
+layout: page
+title: Get the HTML for an Artist Select Tag
+---
+
+<div id='top-box'>
+  <span class='ribbon'>Get the HTML for an Artist Select Tag</span>
+<p>Venue Driver provides an API method that will return HTML code for an artist select box, to be inserted directly into a web page.  For example, to get a drop-down select box for all artist in Venue Driver, you might call a URL like this:</p>
+</div>
+
+<pre class="sh_html">
+http://www.venuedriver.com/api/artists/select_tag.html?username=yourusername&password=yourpassword
+</pre>
+<br/>
+<p>You can test from the command line using the cURL utility:</p>
+
+<pre class="sh_html">
+curl 'http://www.venuedriver.com/api/artists/select_tag.html?username=yourusername&password=yourpassword'
+</pre>
+<br/>
+<p>It will return something like this:</p>
+
+<pre class="sh_html">
+<select id="artists" name="artists"><option value="1">Above &amp; Beyond</option>
+<option value="2">Adventure Club</option>
+<option value="3">Afrojack</option>
+<option value="4">Alvaro</option>
+<option value="5">Arty</option>
+...
+<option value="119">Oliver Heldens</option>
+<option value="121">OB-One</option>
+<option value="122">Irie</option></select>
+</pre>
+<br/>
+<p>Using that resource URL is pretty simple.  In Ruby for example it looks like this:</p>
+
+<pre class="sh_html">
+url = "http://www.venuedriver.com/api/artists/select_tag.html?username=yourusername&password=yourpassword"
+artists_html = Net::HTTP.get_response(URI.parse(url))
+</pre>
+<br/>
+<p>Then you can just drop that HTML snippet into your form with @<%= artists_html %>@ or the equivalent in PHP or whatever. That gives you a simple way to build a form that can request a list of artists.</p>
+
+<div class='link'>
+  <a class='button' href="http://help.venuedriver.com/">Return to Table of Contents</a>
+</div>

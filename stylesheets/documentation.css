@@ -1,0 +1,277 @@
+#content_help {
+  float: left;
+  
+}
+
+#main_content {
+  width: 725px;
+  margin: 0 auto;
+}
+
+.main_body {
+  width: 725px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  background-color: white;
+  opacity: 0.8;
+  margin: 30px auto;
+  height: 2200px;
+}
+
+.full_width {
+  width: 98%;
+  margin: 0 auto;
+}
+
+#demo_box {
+  margin-top: 25px;
+}
+
+#demo_btn {
+  margin: 20px 0px 0px 235px;
+  float: left;
+}
+
+#title a, #big_links a {
+  color: black;
+  font-family: 'centurygothic', 'arial', 'sans-serif';
+  font-size: 20px;
+  text-decoration: none;
+}
+
+#help_content {
+  margin: 30px 0 0 0 ;
+}
+
+#big_links a{
+  color: #e47e00;
+  text-decoration: underline;
+  display: block;
+  line-height: 40px;
+}
+
+#title a:hover {
+  color: #e47e00;
+}
+
+
+/* clasess */
+
+.button { 
+  font-family: "Century Gothic", "sans-serif", "Arial";
+  font-size: 18px;
+  padding: 6px 10px;
+  color: #ffffff;
+  border: 1px solid #d98b2a;
+  background: #D98B2A;
+  /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ee9c30', endColorstr='#d98b2a'); /* for IE 
+  background: -webkit-gradient(linear, left top, left bottom, from(#ee9c30), to(#d98b2a)); /* for webkit browsers 
+  background: -moz-linear-gradient(top,  #ee9c30,  #d98b2a); /* for firefox 3.6+ */
+  -moz-border-radius: 0 5px 5px 0;
+  -webkit-border-radius: 0 5px 5px 0;
+  -khtml-border-radius: 0 5px 5px 0;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  text-decoration:none;
+  position:relative;
+}
+
+.button::before {
+  content: "";
+  float: right;
+  position: absolute;
+  top: -2px;
+  left: -37px;
+  border-color: transparent #D98B2A transparent transparent;
+  border-style: solid;
+  border-width: 18px;
+}
+
+.button:hover {
+  background: #5b6f76;
+  border: 1px #5b6f76 solid;
+}
+
+.button:hover::before{
+  content: "";
+  float: right;
+  position: absolute;
+  top: -2px;
+  left: -37px;
+  border-color: transparent #5b6f76 transparent transparent;
+  border-style: solid;
+  border-width: 18px;
+}
+
+.line {
+  width: 100%;
+  height: 3px;
+  background-color: #6b7d81;
+  margin-top: 30px;
+}
+
+.cl {
+  clear: both;
+}
+
+.note{
+  font-family: "Century Gothic", "sans-serif", "Arial";
+}
+
+.note h2{
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.note ul{
+  margin: 20px 0 0 15px;
+}
+
+.note li, p{
+  font-size: 16px;
+  color: #3B3D3E;
+  line-height: 28px;
+  font-family: 'helvetica', 'arial';
+  font-weight: lighter;
+}
+
+
+pre{ 
+  margin-top: 30px;
+  color: #ffffff !important;
+  font-size: 13px;
+  padding: 10px;
+  background-color: #000000 !important;
+  overflow: scroll;
+}
+
+img{
+  max-width:725px;
+  margin:auto;
+}
+
+hr{
+  margin:20px 0;
+  height:3px;
+  border:0;
+  background-color:#5b6f76;
+}
+
+#top-box{
+  background-color: #d8dfe2;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  margin: 15px 0 25px 0;
+  position:relative;
+  width: 725px;
+}
+
+#top-box p{
+  font-family: "Arial";
+  font-size: 16px;
+  font-weight: lighter;
+  color: #3B3D3E;
+  line-height: 24px;
+  text-align: justify;
+  padding: 10px 20px 20px;
+  margin-top: 10px;
+}
+
+.cl {
+  clear: both;
+}
+
+h2{
+  padding: 0;
+  font-family: 'Centurygothic', 'Helvetica', 'Arial';
+  font-size: 20px;
+  font-weight: lighter;
+  margin: 20px 0 20px 0;
+}
+
+
+p {
+  font-size: 16px;
+  font-weight: lighter;
+  color: #f4f4f4;
+  line-height: 25px;
+  text-align: justify;
+  font-family: 'helvetica', 'arial';
+}
+
+.padding {
+  padding: 10px 0;
+}
+.block{
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  padding:15px;
+  margin: 0 0 30px;
+}
+
+.block p{
+  font-size: 15px;
+  font-weight:normal !important;
+  color: #3B3D3E;
+  text-align: justify;
+  padding:0;
+  margin: 0 0 20px;
+  line-height:22px;
+}
+
+.block.um{
+  margin:30px auto;
+}
+
+.white{
+  margin: 10px 0;
+  background-color:white;
+  color:#3b3d3e;
+}
+
+.link{
+  margin:50px;
+  text-align:center;
+}
+
+.readmore_link{
+  font-family: 'arial';
+  text-decoration: underline;
+  color: #e47e00;
+  font-size: 16px;
+}
+
+.readmore_link:hover, #big_links a:hover{
+  color: #3B3D3E;
+}
+
+#images {
+  -moz-box-shadow: 0 0 5px #888;
+  -webkit-box-shadow: 0 0 5px#888;
+  box-shadow: 0 0 5px #888;
+  margin: 10px 0;
+}
+
+.right {
+  width: 69%;
+  float: right;
+  margin-top: -12px;
+}
+
+.left {
+  float: left;
+  width: 30%;
+}
+
+.clear {
+  height: 20px;
+}
+
+#help_code {
+  width: 700px;
+}
