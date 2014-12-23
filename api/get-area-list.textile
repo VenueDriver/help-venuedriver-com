@@ -1,0 +1,97 @@
+---
+layout: page
+title: Get an Area List for a Venue
+---
+
+<div id='top-box'>
+  <span class='ribbon'>Get an Area list for a venue</span>
+
+<p>
+Areas are collections of Tables in Venue Driver.  You can get an Area list for a venue record if you have a valid login and also the venue ID.  The venue ID is numeric, and you can obtain it through the venue index method, or you can obtain the ID for your venue from Venue Driver support.  If you want the Areas for the Venue with ID 1234, then you can get that with:
+</p>
+</div>
+
+<pre class="sh_html">
+curl 'http://www.venuedriver.com/api/venues/1234/areas.xml?username=venuesite&password=password'
+</pre>
+<br/>
+<p>The above will return something like this:</p>
+
+<pre class="sh_html">
+  <?xml version="1.0" encoding="UTF-8"?>
+  <areas type="array">
+    <area>
+      <created-at type="datetime">2010-11-16T17:14:03+00:00</created-at>
+      <id type="integer">752</id>
+      <limit type="integer">24</limit>
+      <title>Hangover</title>
+      <updated-at type="datetime">2010-12-06T20:57:15+00:00</updated-at>
+      <venue-id type="integer">625</venue-id>
+    </area>
+    <area>
+      <created-at type="datetime">2010-11-16T17:09:02+00:00</created-at>
+      <id type="integer">750</id>
+      <limit type="integer">20</limit>
+      <title>Living Room - Lake Street</title>
+      <updated-at type="datetime">2010-12-06T20:21:47+00:00</updated-at>
+      <venue-id type="integer">625</venue-id>
+    </area>
+    <area>
+      <created-at type="datetime">2010-11-16T17:13:29+00:00</created-at>
+      <id type="integer">751</id>
+      <limit type="integer">12</limit>
+      <title>Living Room - theFireplace</title>
+      <updated-at type="datetime">2010-12-06T20:23:02+00:00</updated-at>
+      <venue-id type="integer">625</venue-id>
+    </area>
+    <area>
+      <created-at type="datetime">2010-11-12T19:09:45+00:00</created-at>
+      <id type="integer">749</id>
+      <limit type="integer">20</limit>
+      <title>Loft - State Street</title>
+      <updated-at type="datetime">2011-01-15T18:34:24+00:00</updated-at>
+      <venue-id type="integer">625</venue-id>
+    </area>
+    <area>
+      <created-at type="datetime">2010-12-06T20:25:44+00:00</created-at>
+      <id type="integer">776</id>
+      <limit type="integer">30</limit>
+      <title>Loft - theSofas</title>
+      <updated-at type="datetime">2011-01-15T18:34:35+00:00</updated-at>
+      <venue-id type="integer">625</venue-id>
+    </area>
+    <area>
+      <created-at type="datetime">2010-12-06T20:27:18+00:00</created-at>
+      <id type="integer">778</id>
+      <limit type="integer">45</limit>
+      <title>Patio - Cabana Booths</title>
+      <updated-at type="datetime">2010-12-06T20:27:18+00:00</updated-at>
+      <venue-id type="integer">625</venue-id>
+    </area>
+    <area>
+      <created-at type="datetime">2010-12-06T20:28:59+00:00</created-at>
+      <id type="integer">780</id>
+      <limit type="integer">6</limit>
+      <title>Patio - Table 500</title>
+      <updated-at type="datetime">2010-12-06T20:28:59+00:00</updated-at>
+      <venue-id type="integer">625</venue-id>
+    </area>
+    <area>
+      <created-at type="datetime">2010-12-06T20:26:37+00:00</created-at>
+      <id type="integer">777</id>
+      <limit type="integer">44</limit>
+      <title>Patio - theDeck</title>
+      <updated-at type="datetime">2010-12-07T17:54:39+00:00</updated-at>
+      <venue-id type="integer">625</venue-id>
+    </area>
+  </areas>
+</pre>
+
+<p>
+This API method can also return data formatted with JSON instead of XML, just like the venue index
+method above.  Simply change the file extension in the request URL from ".xml" to ".json":
+</p>
+
+<pre class="sh_html">
+curl 'http://www.venuedriver.com/api/venues/1234/areas.json?username=venuesite&password=password'
+</pre>

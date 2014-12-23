@@ -1,0 +1,83 @@
+---
+layout: page
+title: JavaScript Widget 
+---
+
+<div id='top-box'>
+  <span class='ribbon'>VenueDriver JavaScript Widget</span>
+
+  <p>This is a small documentation on how to use the JavaScript widget. It displays a list of events with links to the ticketing pages. The ticketing pages can be hosted on Venue Driver or externally.</p>
+</div>
+
+<div id="demo_box">
+  <img src="images/js_widget/demo.png"/>
+</demo>
+
+<span id="demo_btn" class="button" onClick="window.location='http://widgets.venuedriver.com/demo.html'">Live demo of the widget</span>
+<div class="cl"></div>
+
+<hr class="line">
+
+<div class="note">
+  <h2>Requirements</h2>
+
+  <ul>
+    <li>To use VenueWidget you need last jQuery version from <a href="http://code.jquery.com/jquery.min.js" target="_blank", span class ="readmore_link">http://code.jquery.com/jquery.min.js</span></a></li>
+    <li>Put the jquery.min.js file on to HTML document</li>
+  </ul>
+</div>
+
+<div class="cl"></div>
+<hr class="line">
+
+<div class="note">
+  <h2> How to Install</h2>
+
+  <ul>
+   <li>Make sure you have jQuery loaded</li>
+    <li>You need to set a couple of parameters api_token(your secret api token), account(your account id number) & div_id(the name of div where you draw the table)</li>
+    <li>link to the VenueWidget.js file directly from <a href="http://widgets.venuedriver.com/js/AccountWidget.js" target="_blank", span class ="readmore_link">http://widgets.venuedriver.com/js/AccountWidget.js</span></a></li>
+  </ul>
+</div>
+<br/>
+<div class="important">
+  <div class="note">
+    <p>When using this widget, it is very important that you link to the VenueWidget.js from <a href="http://widgets.venuedriver.com/js/AccountWidget.js" target="_blank", span class ="readmore_link">http://widgets.venuedriver.com/js/AccountWidget.js</span></a>. This will allow us to update the widget as new features come in without the need for you to update the file.</p>
+  </div>
+</div>
+
+<div class="cl"></div>
+<hr class="line">
+
+<div class="note">
+  <h2> Code to embed </h2>	
+  <p>Copy this example code, then set the API access token, then embed the widget in your HTML page.</p>
+</div>	
+
+<pre class="sh_html">
+ &lt;html&gt;
+  &lt;head&gt;
+   &lt;link href='http://widgets.venuedriver.com/css/styles.css' rel='stylesheet' 
+   type='text/css'&gt;
+   &lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"&gt;
+   &lt;/script&gt;
+   &lt;script&gt;
+    VenueDriverWidgetConfig = new Object();
+    VenueDriverWidgetConfig.api_token = '' //example '02AFDFG57HTT7GQ53'
+    VenueDriverWidgetConfig.account = '' //example '12345'
+    VenueDriverWidgetConfig.div_id = '' //example 'my_div'
+   &lt;/script&gt;
+   &lt;script src="http://widgets.venuedriver.com/js/AccountEventsWidget.js"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+   &lt;div id="wrapper"&gt;
+    &lt;div id="my_div"&gt;&lt;/div&gt;
+   &lt;/div&gt;
+  &lt;/body&gt;
+ &lt;/html&gt;
+</pre>
+
+<div class='link'>
+  <a class='button' href="http://help.venuedriver.com/">Return to Table of Contents</a>
+</div>
+

@@ -1,0 +1,80 @@
+---
+layout: page
+title: Get an Event List for a Venue
+---
+
+<div id='top-box'>
+  <span class='ribbon'>	Get an Event list for a Venue</span>
+
+<p>You can get an Event list for a Venue record in Venue Driver if you have a valid login and also the venue ID.  The venue ID is numeric, and you can obtain it through the venue index method, or you can obtain the ID for your venue from Venue Driver support.  The API's /venues resource exposes a nested events resource.  So if you want the events for the venue with ID 1234, then you can get that with:</p>
+</div>
+
+<pre class="sh_html">
+curl 'http://www.venuedriver.com/api/venues/1234/events.xml?username=venuesite&password=password'
+</pre>
+<br/>
+<p>The above will return something like this:</p>
+
+<pre class="sh_html">
+<?xml version="1.0" encoding="UTF-8"?>
+<events type="array">
+  <event>
+    <VIP-URL nil="true"></VIP-URL>
+    <active type="boolean" nil="true"></active>
+    <ages nil="true"></ages>
+    <close type="datetime">2000-01-01T08:15:00-05:00</close>
+    <closed-message nil="true"></closed-message>
+    <cover nil="true"></cover>
+    <created-at type="datetime">2010-02-09T20:48:10-05:00</created-at>
+    <date type="date">2010-03-12</date>
+    <description nil="true"></description>
+    <guestlist-URL nil="true"></guestlist-URL>
+    <guestlist-conditions nil="true"></guestlist-conditions>
+    <home-URL nil="true"></home-URL>
+    <id type="integer">5635</id>
+    <myspace-URL nil="true"></myspace-URL>
+    <open type="datetime">2000-01-01T22:30:00-05:00</open>
+    <tickets-URL nil="true"></tickets-URL>
+    <tickets-sold-count type="integer">0</tickets-sold-count>
+    <time type="datetime" nil="true"></time>
+    <title>Friday Event</title>
+    <updated-at type="datetime">2010-03-01T14:42:29-05:00</updated-at>
+  </event>
+  <event>
+    <VIP-URL nil="true"></VIP-URL>
+    <active type="boolean" nil="true"></active>
+    <ages nil="true"></ages>
+    <close type="datetime">2000-01-01T08:15:00-05:00</close>
+    <closed-message nil="true"></closed-message>
+    <cover nil="true"></cover>
+    <created-at type="datetime">2010-02-09T20:48:35-05:00</created-at>
+    <date type="date">2010-03-13</date>
+    <description nil="true"></description>
+    <guestlist-URL nil="true"></guestlist-URL>
+    <guestlist-conditions nil="true"></guestlist-conditions>
+    <home-URL nil="true"></home-URL>
+    <id type="integer">5636</id>
+    <myspace-URL nil="true"></myspace-URL>
+    <open type="datetime">2000-01-01T22:00:00-05:00</open>
+    <tickets-URL nil="true"></tickets-URL>
+    <tickets-sold-count type="integer">0</tickets-sold-count>
+    <time type="datetime" nil="true"></time>
+    <title>Saturday Event</title>
+    <updated-at type="datetime">2010-03-01T14:42:29-05:00</updated-at>
+  </event>
+</events>
+</pre>
+<br/>
+<p>This API method can also return data formatted with JSON instead of XML, just like the venue index
+method above.  Simply change the file extension in the request URL from ".xml" to ".json": </p>
+
+<pre class="sh_html">
+curl 'http://www.venuedriver.com/api/venues/1234/events.json?username=venuesite&password=password'
+</pre>
+
+<br/>
+This API action also supports <a href="http://en.wikipedia.org/wiki/JSONP">JSONP</a>, if you're trying to access the API from JavaScript in your web site.  Simply add a "callback" parameter, and the result will be wrapped in a standard JSONP response format with that callback name.  jQuery will handle this for you automatically through the <a href="http://api.jquery.com/jQuery.getJSON/">jQuery.getJSON()</a> function.
+
+<div class='link'>
+  <a class='button' href="http://help.venuedriver.com/">Return to Table of Contents</a>
+</div>

@@ -1,0 +1,152 @@
+---
+layout: page
+title: Get Flyer Images for an Event
+---
+
+<div id='top-box'>
+  <span class='ribbon'>	Get flyer images for an event</span>
+
+<p>Flyers are a nested resource under the event resource.  They are not included in the event list returned by /venues/:venue_id/events.xml, but you can obtain them through the flyer resource:</p>
+</div>
+
+<pre class="sh_html">
+  curl 'http://www.venuedriver.com/api/venues/1234/events/5678/flyers.xml?username=venuesite&password=password'
+</pre>
+<br/>
+<p>The above will return the list of flyers for the event 5678:</p>
+
+<pre class="sh_html">
+  <?xml version="1.0" encoding="UTF-8"?>
+  <flyers type="array">
+    <flyer>
+      <asset-content-type>image/jpeg</asset-content-type>
+      <asset-file-name>IMG_3020.jpg</asset-file-name>
+      <asset-file-size type="integer">473217</asset-file-size>
+      <asset-updated-at type="datetime">2010-03-02T17:00:00-05:00</asset-updated-at>
+      <event-id type="integer">5313</event-id>
+      <id type="integer">8</id>
+      <asset-url>/assets/8/original/IMG_3020.jpg</asset-url>
+    </flyer>
+    <flyer>
+      <asset-content-type>image/jpeg</asset-content-type>
+      <asset-file-name>IMG_2970.jpg</asset-file-name>
+      <asset-file-size type="integer">603736</asset-file-size>
+      <asset-updated-at type="datetime">2010-03-02T17:00:56-05:00</asset-updated-at>
+      <event-id type="integer">5313</event-id>
+      <id type="integer">9</id>
+      <asset-url>/assets/9/original/IMG_2970.jpg</asset-url>
+    </flyer>
+    <flyer>
+      <asset-content-type>image/jpeg</asset-content-type>
+      <asset-file-name>Safari-screenshot-236.jpg</asset-file-name>
+      <asset-file-size type="integer">58457</asset-file-size>
+      <asset-updated-at type="datetime">2010-03-02T18:02:25-05:00</asset-updated-at>
+      <event-id type="integer">5313</event-id>
+      <id type="integer">10</id>
+      <asset-url>/assets/10/original/Safari-screenshot-236.jpg</asset-url>
+    </flyer>
+    <flyer>
+      <asset-content-type>application/pdf</asset-content-type>
+      <asset-file-name>20091206-160523.pdf</asset-file-name>
+      <asset-file-size type="integer">3302460</asset-file-size>
+      <asset-updated-at type="datetime">2010-03-02T18:38:33-05:00</asset-updated-at>
+      <event-id type="integer">5313</event-id>
+      <id type="integer">12</id>
+      <asset-url>/assets/12/original/20091206-160523.pdf</asset-url>
+    </flyer>
+    <flyer>
+      <asset-content-type>image/jpeg</asset-content-type>
+      <asset-file-name>02_events.jpg</asset-file-name>
+      <asset-file-size type="integer">1378489</asset-file-size>
+      <asset-updated-at type="datetime">2010-03-02T18:39:34-05:00</asset-updated-at>
+      <event-id type="integer">5313</event-id>
+      <id type="integer">13</id>
+      <asset-url>/assets/13/original/02_events.jpg</asset-url>
+    </flyer>
+  </flyers>
+</pre>
+<br/>
+<p>You can also use the show action for the event resource.  For example, this will return the list of flyer images for the event 5678 at the venue 1234:</p>
+
+<pre class="sh_html">
+  curl 'http://venuedriver.com/api/venues/1234/events/5678.xml?username=venuesite&password=password'
+</pre>
+<br/>
+<p>The response includes the attributes for the event as in the above, but it also includes the nested flyer records:</p>
+
+<pre class="sh_html">
+<?xml version="1.0" encoding="UTF-8"?>
+<event>
+  <VIP-URL nil="true"></VIP-URL>
+  <active type="boolean" nil="true"></active>
+  <ages nil="true"></ages>
+  <close type="datetime">2000-01-01T09:00:00-05:00</close>
+  <closed-message nil="true"></closed-message>
+  <cover nil="true"></cover>
+  <created-at type="datetime">2010-01-02T01:01:46-05:00</created-at>
+  <date type="date">2010-03-02</date>
+  <description nil="true"></description>
+  <guestlist-URL nil="true"></guestlist-URL>
+  <guestlist-conditions nil="true"></guestlist-conditions>
+  <home-URL nil="true"></home-URL>
+  <id type="integer">5313</id>
+  <myspace-URL nil="true"></myspace-URL>
+  <open type="datetime">2000-01-01T22:30:00-05:00</open>
+  <tickets-URL nil="true"></tickets-URL>
+  <time type="datetime" nil="true"></time>
+  <title>Tuesday Night</title>
+  <updated-at type="datetime">2010-03-01T14:42:14-05:00</updated-at>
+  <wiki-name nil="true"></wiki-name>
+  <flyers type="array">
+    <flyer>
+      <asset-content-type>image/jpeg</asset-content-type>
+      <asset-file-name>IMG_3020.jpg</asset-file-name>
+      <asset-file-size type="integer">473217</asset-file-size>
+      <asset-updated-at type="datetime">2010-03-02T17:00:00-05:00</asset-updated-at>
+      <event-id type="integer">5313</event-id>
+      <id type="integer">8</id>
+      <asset-url>/assets/8/original/IMG_3020.jpg</asset-url>
+    </flyer>
+    <flyer>
+      <asset-content-type>image/jpeg</asset-content-type>
+      <asset-file-name>IMG_2970.jpg</asset-file-name>
+      <asset-file-size type="integer">603736</asset-file-size>
+      <asset-updated-at type="datetime">2010-03-02T17:00:56-05:00</asset-updated-at>
+      <event-id type="integer">5313</event-id>
+      <id type="integer">9</id>
+      <asset-url>/assets/9/original/IMG_2970.jpg</asset-url>
+    </flyer>
+    <flyer>
+      <asset-content-type>image/jpeg</asset-content-type>
+      <asset-file-name>Safari-screenshot-236.jpg</asset-file-name>
+      <asset-file-size type="integer">58457</asset-file-size>
+      <asset-updated-at type="datetime">2010-03-02T18:02:25-05:00</asset-updated-at>
+      <event-id type="integer">5313</event-id>
+      <id type="integer">10</id>
+      <asset-url>/assets/10/original/Safari-screenshot-236.jpg</asset-url>
+    </flyer>
+    <flyer>
+      <asset-content-type>application/pdf</asset-content-type>
+      <asset-file-name>20091206-160523.pdf</asset-file-name>
+      <asset-file-size type="integer">3302460</asset-file-size>
+      <asset-updated-at type="datetime">2010-03-02T18:38:33-05:00</asset-updated-at>
+      <event-id type="integer">5313</event-id>
+      <id type="integer">12</id>
+      <asset-url>/assets/12/original/20091206-160523.pdf</asset-url>
+    </flyer>
+    <flyer>
+      <asset-content-type>image/jpeg</asset-content-type>
+      <asset-file-name>02_events.jpg</asset-file-name>
+      <asset-file-size type="integer">1378489</asset-file-size>
+      <asset-updated-at type="datetime">2010-03-02T18:39:34-05:00</asset-updated-at>
+      <event-id type="integer">5313</event-id>
+      <id type="integer">13</id>
+      <asset-url>/assets/13/original/02_events.jpg</asset-url>
+    </flyer>
+  </flyers>
+</event>
+</pre>
+
+<div class='link'>
+  <a class='button' href="http://help.venuedriver.com/">Return to Table of Contents</a>
+</div>

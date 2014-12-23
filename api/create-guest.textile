@@ -1,0 +1,33 @@
+---
+layout: page
+title: Create a Reservation
+---
+
+<div id='top-box'>
+  <span class='ribbon'>	Create a reservation</span>
+<p>Create a reservation in Venue Driver by posting a reservation record with the proper event_id to http://www.venuedriver.com/api/reservations, as in this example:</p>
+</div>
+
+<pre class="sh_html">
+  curl -i -H "Accept: application/json" -X POST -d "event_id=1840479691&guest[first]=test&guest[last]=test&guest[phone]=5555555&guest[email]=test@test.com" "http://www.venuedriver.com/api/guests?username=venuesite&password=password"
+</pre>
+<br/>
+<p>When successful, the above query will return a JSON representation of the new reservation:</p>
+
+<pre class="sh_html">
+HTTP/1.1 200 OK 
+Server: WEBrick/1.3.1 (Ruby/1.8.7/2011-12-28)
+X-Runtime: 1.43599
+Cache-Control: private, max-age=0, must-revalidate
+Content-Length: 464
+Date: Tue, 28 Feb 2012 21:49:44 GMT
+Etag: "99fed2ad5431bb0d4dfae22b0063f7f8"
+Content-Type: application/json; charset=utf-8
+Connection: Keep-Alive
+Set-Cookie: _saintpeter_session_id=6fe02fcd80e3c03f1f6194fc4b584210; path=/
+  {"phone_alternative":null,"checked_in":null,"notes":null,"id":4861032,"guestlist_id":236629,"total_returns":null,"event_notes":null,"created_at":"2012/02/28 16:49:43 -0500","updated_at":"2012/02/28 16:49:43 -0500","signup_notes":null,"account_id":37,"first":"test","event_id":44105,"email":"test@test.com","staff_name":"","vip":null,"phone_carrier":null,"phone":"5555555","last":"test","date_of_birth":null,"extra_count":null,"checkin_time":null,"conditions":null}
+</pre>
+
+<div class='link'>
+  <a class='button' href="http://help.venuedriver.com/">Return to Table of Contents</a>
+</div>

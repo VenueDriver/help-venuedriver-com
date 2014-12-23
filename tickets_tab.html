@@ -1,0 +1,273 @@
+---
+layout: page
+title: Tickets Tab
+---
+
+<div id='top-box'>
+  <span class='ribbon'>Tickets Tab</span>
+
+<p>The Tickets Tab in Venue Driver is where managers and above can create and modify ticketing options for an event, and publish them onto their ticketing page, which is provided at no additional cost to every Venue Driver client. With Venue Driver's integrated ticketing platform, third-party ticketing on through a separate service becomes extraneous and unnecessary. The initial view of the Tickets Tab displays a summary of all ticketed events within an account.</p>
+</div>
+<!-- show tickets tab. -->
+
+<div id ="images"> 
+  <img src="/images/main_tickets_tab.png">
+</div>
+
+<h2>Ticket Tab</h2>
+
+<div class="block white">
+<p><b>Date</b><br/>
+The date of the event.</p>
+
+<p><b>Event</b><br/>
+The name of the event.</p>
+
+<p><b>Venue</b><br/>
+The Venue where the event is to occur.</p>
+
+<p><b>Active</b><br/>
+Checking the "Active" checkbox will put an event on sale immediately. Ticket types must be established to show an event on sale.</p>
+
+<p><b>Closed Message</b><br/>
+Click "Edit" to display a custom message when tickets are taken off sale.</p>
+
+<p><b>Tickets Sold</b>
+<br/>The number of tickets sold across all ticket types in an event will be displayed here.</p>
+
+<p><b>Revenue</b>
+<br/>The overall monetary revenue for a show, minus service fees, will be displayed here. This number is in the local currency of where the show is located.</p>
+
+<p><b>Redeemed</b>
+<br/>The amount of tickets redeemed from an event.</p>
+
+</div>
+
+<hr/>
+<h2>Creating and modifying tickets on sale</h2>
+
+<p>Clicking the "Tickets" button next to the event name, will show the ticket types on sale, if any are yet present. The columns are as follows:</p>
+
+<!-- show focus on active tickets. -->
+
+<div id ="images">
+<img src="/images/active_tickets.png">
+</div>
+
+<br/>
+
+<div class="block white">
+<p><b>Type</b>
+<br/>The type of ticket on sale.</p>
+
+<p><b>Active</b>
+<br/>The "Active" checkbox determines whether a specific ticket type is available for public sale or not. </p>
+
+<p><b>On-Sale Start</b>
+<br/>When a ticket type is scheduled to go on sale. This field is inline editable.</p>
+
+<p><b>End</b>
+<br/>When a ticket type is scheduled to go off sale. This value can be overrode if the quantity of tickets for sale is depleted before the date specified. This field is inline editable.</p>
+
+<p><b>Number Available</b>
+<br/>The number of tickets available at this price point. This field is inline editable.</p>
+
+<p><b>Price</b>
+<br/>The initial price point of this ticket type.</p>
+
+<p><b>Number Sold, This Price</b>
+<br/>How many tickets were sold at the initial price point for a ticket type.</p>
+
+<p><b>Revenue, This Price</b>
+<br/>The revenue collected from sales at the initial price point.</p>
+
+<p><b>Total Number Sold</b>
+<br/>The total number of tickets sold across all price points for the ticket type in question, not just the initial one listed.</p>
+
+<p><b>Total Revenue</b>
+<br/>The revenue collected from all sales across all price points for the ticket type in question, not just the one listed.</p>
+</div>
+
+<hr/>
+
+<h2>Creating and editing a ticket type for sale</h2>
+
+<p>Click the "Create New" Button to create a new ticket type. It is strongly advised creating a new ticket only if the ticket itself grants new privileges to the customer. If it is a price change, create a price change to retain existing ticketing parameters.</p>
+  
+<!-- show focus on creating a new ticket. --> 
+<div id ="images">
+<img src="/images/new_ticket.png">
+</div>
+<br/>
+<div class="block white">
+
+<p><b>Type</b>
+<br/>
+Define the ticket type here. Examples include "General Admission", "VIP Admission", "Before 2 AM ticket". This will carry over to the PDF e-ticket sent to the customer.</p>
+
+<p><b>Description</b>
+<br/>
+Describe what the ticket grants the customer here. This field is limited to 140 characters. This will carry over to the PDF e-ticket sent to the customer.</p>
+
+<p><b>Active</b>
+<br/>
+Checking this checkbox will activate this ticket type immediately upon creation.</p>
+
+<p><b>On-Sale Start</b>
+<br/>
+The date and time a ticket type will start selling on the public ticket page of an account. This time is in the local time of the venue as defined in the Venues tab.</p>
+
+<p><b>End</b>
+<br/>
+The date and time a ticket type will cease to be sold. This time is in the local time of the venue as defined in the Venues tab. Tickets will automatically go off sale either when the quantity is exhausted, or at the start date and time of the event.</p>
+
+<p><b>Number Available</b>
+<br/>
+The number of tickets available at this price point for this ticket type.</p>
+
+<p><b>Price</b>
+<br/>
+The price, in the local currency, of the ticket type being sold.</p>
+
+<p><b>Price Changes within the initial creation of a ticket type</b>
+<br/>
+Price changes can be defined immediately in this section. The fields correspond to the fields defined above. Note that if there is a date conflict, Venue Driver will assume user error and only sell the lower priced ticket.</p>
+
+<p><b>Area</b>
+<br/>
+For those customers who choose to sell prepaid VIP packages through Venue Driver, an area, corresponding to a VIP area in the venue, can be defined here. When a ticket is purchased with this value set, a VIP reservation will automatically be made, and approved for the person who purchased the ticket.</p>
+
+<p><b>Click the "Create" button to commit the ticket type to the system.</b></p>
+
+</div>
+
+<hr/>
+
+<h2>Creating price changes after creating a new ticket type</h2>
+
+<p>Click the "Price Changes" button to create, edit, and view price changes within a ticket type. Parameters such as the name of the ticket type and the description remain the same, with only the price, start and end dates, and number available being editable. Click "Create New" to create a new price change.</p>
+
+<!-- show focus on creating a price change. -->
+
+<div id ="images">
+  <img src="/images/price_change.png">
+</div>
+<br/>
+<div class="block white">
+
+<p><b>Active</b>
+<br/>
+Checking the active checkbox will ensure this price change will take effect either when the quantity of the previous price point is exhausted, or the start date is reached, whichever comes first.</p>
+
+<p><b>On-Sale Start</b>
+<br/>
+The date and time this price change will take effect. This will be overridden if the previous ticket type's quantity is exhausted before this date. <b>Please note, if a ticket sale plan is based on quantities and not a date/time, an on-sale start time need not be input as it will not be recognized by Venue Driver</b></p>
+
+<p><b>End</b>
+<br/>
+The date and time this price change will end sale. This will be overridden if the quantity is exhausted before this date, and the system will immediately activate the next price point, if one is defined.</p>
+
+<p><b>Price</b>
+<br/>
+The price of this price change in the local currency.</p>
+
+<p><b>Click the "Create" button to commit the price change to the system.</b></p>
+
+<h2>A small note on Price Changes</h2>
+<p>Venue Driver, as noted above, allows for automated price changes to occur when ticket sales are in progress. However, to ensure that shows do not oversell, Venue Driver's system is designed to "undersell" in the case of high-volume events. The way a ticket sale occurs is that a ticket is taken out of the allocation temporarily, i.e. "reserved" until the purchase is completed when a customer selects it for purchase on the ticketing site. When the purchase is complete, the ticket is taken permanently out of the allocation. In high-volume situations, many tickets are "on reserve" as customers complete their purchase, and since they are technically not for sale, the price point may jump to the next level while the users complete their purchase at the lower level. Some users, due to issues with their credit cards, may not complete their purchase, leaving leftover tickets at a lower price point, since tickets from failed purchases are put back into circulation. The reason that the system is designed to "undersell" is to ensure that the show is not oversold, which can lead to issues with the venue being over capacity.</p>
+
+<p>Multiple methods exist by which this can be dealt with. The first method is to add the difference to the final price point. For example, if there are 500 tickets on sale at $40, 500 tickets at $50, and 500 tickets at $60, and 498 were sold at $40 and 498 at $50, the user can add the extra 4 to the final $60 price point. A second method to deal with this is for the user to manually supervise price changes, only activating subsequent ones as sales progress. A third method is to create "master" ticket categories for different price points, and manually activating them as sales progress</p>.
+<p>
+For a visual step-by-step guide on this procedure, please consult the following video:</p>
+<p>
+<embed src="http://content.screencast.com/users/stcanada/folders/Jing/media/79f110d6-fb4f-4e15-b6e0-9d821d78cd03/PRICE%20CHANGE_tutorial.swf" width="1260" height="687"/></p>
+
+
+<h2>Managing Existing Ticket Sales</h2>
+
+<p>Venue Driver allows for the client venue or organization to manage their own existing ticket sales without the need to contact Venue Driver Support for routine tasks, including re-sending lost e-tickets to the email on file, or a new email, and viewing/sorting sales for analysis. Each column heading will be defined below. </p>
+
+<!-- show focus on Sales. -->
+
+<h2>A note on ticket sales with price changes.</h2>
+
+<p>In order to safeguard our client's compliance with local ordinances determining their overall capacity for an event, Venue Driver implements several measures to ensure that ticket sales do not exceed set limits. The primary way with which this becomes visible is when there are leftover ticket sales at a lower price point, and Venue Driver has activated a higher price point. This is due to tickets being placed "on hold" while a purchaser fills out his or her billing and credit card information on our secure purchase form. For example, if a venue puts 400 tickets on sale at $40.00 and 400 tickets on sale at $50.00, they may notice that the lower price point sold 397. What happens is when these tickets are put on hold, they are effectively taken off sale, and in the interim, the active price point may have gone to the next available level. In high-volume sales situations, this difference can be even more noticeable, with many tens of tickets at a price point remaining unsold. The ticket purchaser sees this in the sense that when they go to final check-out, the price may have jumped already. However, if they are on our secure purchase form, they will be able to purchase tickets at the lower price point. However, if they exceed the two-minute hold time, their purchase will not go through and they will be forced to purchase tickets at the higher active price point. <b>Venue Driver LLC will not credit customers for the difference in price, as this occurrence is not representative of a malfunction.</b></p>
+
+<p>The alternative is that the system would oversell tickets due to the sales on hold, leading to an oversold event, which exposes Venue Driver LLC to liability. Thus, "underselling" is the only recourse, to protect both Venue Driver LLC and the client.</p>
+<p>
+If a client wishes to sell the full allocation of tickets, they can merely add the "missing" quantity to the last price point for an event ticket sale. So, if 397 tickets were sold at $40.00, and 400 were sold at $50.00, one can merely add the 3 "missing" tickets to the $50.00 price point to allow for a complete sale.</p>
+
+<p>Still another alternative is to create each price point as a separate ticket type and manually activate them as a sale progresses. Venue Driver includes an email notification checkbox in a user's staff profile to notify him or her of a sold-out condition on a show. The disadvantage of this method is that ticket purchasers may see a "sold-out" message temporarily while a new price point is placed online.</p>
+</div>
+<p>
+For a visual step-by-step guide on this procedure, please consult the following video:</p>
+<p><!-- copy and paste. Modify height and width if desired. --> <object id="scPlayer"  width="640" height="360" type="application/x-shockwave-flash" data="http://content.screencast.com/users/VenueDriver/folders/Default/media/41aa80ad-9010-42ad-9d8a-8b15028654a7/bootstrap.swf" > <param name="movie" value="http://content.screencast.com/users/VenueDriver/folders/Default/media/41aa80ad-9010-42ad-9d8a-8b15028654a7/bootstrap.swf" /> <param name="quality" value="high" /> <param name="bgcolor" value="#FFFFFF" /> <param name="flashVars" value="thumb=http://content.screencast.com/users/VenueDriver/folders/Default/media/41aa80ad-9010-42ad-9d8a-8b15028654a7/FirstFrame.jpg&containerwidth=640&containerheight=360&content=http://content.screencast.com/users/VenueDriver/folders/Default/media/41aa80ad-9010-42ad-9d8a-8b15028654a7/PRICE%20CHANGE_tutorial.swf&blurover=false" /> <param name="allowFullScreen" value="true" /> <param name="scale" value="showall" /> <param name="allowScriptAccess" value="always" /> <param name="base" value="http://content.screencast.com/users/VenueDriver/folders/Default/media/41aa80ad-9010-42ad-9d8a-8b15028654a7/" /> Unable to display content. Adobe Flash is required.</object>
+</p>
+<hr/>
+
+<h2>Managing Existing Ticket Sales</h2>
+
+<p>Venue Driver allows for the client venue or organization to manage their own existing ticket sales without the need to contact Venue Driver Support for routine tasks, including re-sending lost e-tickets to the email on file, or a new email, and viewing/sorting sales for analysis. Each column heading will be defined below. </p>
+
+
+<!-- show focus on Sales. -->
+<div id ="images">
+  <img src="/images/ticket_sales.png">
+</div>
+
+<br/>
+
+<div class="block white">
+
+<p><b>Export</b>
+<br/>
+Export all ticket data for an event to a CSV file for offline analysis in Numbers, Excel, or Open Office Calc. Exported fields include quantity, subtotal, name, email, and physical address.</p>
+
+<p><b>Quantity</b>
+<br/>
+The quantity of tickets sold per order.</p>
+
+<p><b>Type</b>
+<br/>
+The type of ticket sold per order.</p>
+
+<p><b>First</b>
+<br/>
+The first name of the purchaser.</p>
+
+<p><b>Last</b>
+<br/>
+The last name of the purchaser.</p>
+
+<p><b>Email</b>
+<br/>
+The email address of the purchaser. This is explicitly required to be a valid email address for successful ticket delivery. This can be edited in case of an erroneous input by the customer.</p>
+
+<p><b>Mobile Phone</b>
+<br/>
+The optional mobile number of the ticket purchaser.</p>
+
+<p><b>Created at</b>
+<br/>
+The time (GMT) the transaction occurred.</p>
+
+<p><b>Subtotal</b>
+<br/>
+The subtotal of the purchase in the local currency. The subtotal is defined as the total ticket purchase price minus the Venue Driver LLC surcharge.</p>
+
+<p><b>Re-send e-ticket</b>
+</br>
+Clicking this button will re-send the e-ticket(s) to the customer's email account on file.</p>
+
+<p><b>Show</b>
+<br/>
+Clicking this button will show detailed purchase information, including physical address, ticket code, total cost, whether the ticket was voided or redeemed, and other miscellaneous data.</p>
+
+<p><b>Voiding a ticket purchase</b>
+<br/>
+Venue Driver LLC's general ticketing agreement with venues prohibits refunds unless the venue or organization agrees to them on a case-by-case basis in advance. If a ticket is to be voided, the client venue must explicitly authorize the refund with their Venue Driver representative. Tickets will be marked as void in the system and show up as such if they are attempted to be redeemed. Refunds can take up to two weeks to be processed depending on the time of year and the customer's bank. Venue Driver LLC will only refund face value unless an agreement with the client venue to refund the full value of the ticket is reached. In that case, the client venue will be responsible to pay back Venue Driver LLC the loss of the surcharge. Venue Driver will also void tickets that are discovered to be fraudulently purchased, with an attempt to notify the venue prior to the event. Venue Driver will also, on the client venue's behalf, pursue all legal means to prosecute the fraudulent customer. Conversely, Venue Driver will not honor chargebacks with customers dissatisfied with the event, or customers looking for a refund prior to the event date. Repeated voids from the same customer will be treated as abuse of the system, resulting in the customer being blacklisted systemwide. In the event of an event cancellation, the client venue is responsible for notifying Venue Driver of the cancellation. A procedure to handle the cancellation will be worked out with the client venue on a case-by-case basis. For further questions regarding the void process, contact your Venue Driver representative.</p>
+</div>
+
+<div class='link'>
+  <a class='button' href="http://help.venuedriver.com/">Return to Table of Contents</a>
+</div>
