@@ -1,22 +1,21 @@
 ---
-layout: standard
-title: Get an Event List for an Account
+layout: page
+title: Get an Event List for a Venue
 ---
 
-h1. Get an event list for a venue
+<div id='top-box'>
+  <span class='ribbon'>	Get an Event list for a Venue</span>
 
-You can get an event list for a venue record in Venue Driver if you have a valid login and also the venue ID.  The venue ID is numeric, and you can obtain it through the above venue index method, or you can obtain the ID for your venue from Venue Driver support.  The API's /venues resource exposes a nested events resource.  So if you want the events for the venue with ID 1234, then you can get that with:
+<p>You can get an Event list for a Venue record in Venue Driver if you have a valid login and also the venue ID.  The venue ID is numeric, and you can obtain it through the venue index method, or you can obtain the ID for your venue from Venue Driver support.  The API's /venues resource exposes a nested events resource.  So if you want the events for the venue with ID 1234, then you can get that with:</p>
+</div>
 
-<pre>
-<code>
-curl 'http://venuedriver.com/api/venues/1234/events.xml?username=venuesite&password=password'
-</code>
+<pre class="sh_html">
+curl 'http://www.venuedriver.com/api/venues/1234/events.xml?username=venuesite&password=password'
 </pre>
-  
-The above will return something like this:
+<br/>
+<p>The above will return something like this:</p>
 
-<pre>
-<code>
+<pre class="sh_html">
 <?xml version="1.0" encoding="UTF-8"?>
 <events type="array">
   <event>
@@ -64,14 +63,18 @@ The above will return something like this:
     <updated-at type="datetime">2010-03-01T14:42:29-05:00</updated-at>
   </event>
 </events>
-</code>
+</pre>
+<br/>
+<p>This API method can also return data formatted with JSON instead of XML, just like the venue index
+method above.  Simply change the file extension in the request URL from ".xml" to ".json": </p>
+
+<pre class="sh_html">
+curl 'http://www.venuedriver.com/api/venues/1234/events.json?username=venuesite&password=password'
 </pre>
 
-This API method can also return data formatted with JSON instead of XML, just like the venue index
-method above.  Simply change the file extension in the request URL from ".xml" to ".json":
+<br/>
+This API action also supports <a href="http://en.wikipedia.org/wiki/JSONP">JSONP</a>, if you're trying to access the API from JavaScript in your web site.  Simply add a "callback" parameter, and the result will be wrapped in a standard JSONP response format with that callback name.  jQuery will handle this for you automatically through the <a href="http://api.jquery.com/jQuery.getJSON/">jQuery.getJSON()</a> function.
 
-<pre>
-<code>
-curl 'http://venuedriver.com/api/venues/1234/events.json?username=venuesite&password=password'
-</code>
-</pre>
+<div class='link'>
+  <a class='button' href="http://help.venuedriver.com/">Return to Table of Contents</a>
+</div>

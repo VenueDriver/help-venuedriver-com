@@ -1,48 +1,44 @@
 ---
-layout: standard
+layout: page
 title: Get the HTML for an Event Select Tag
 ---
 
-h3. Get the HTML for an Event Select Tag
+<div id='top-box'>
+  <span class='ribbon'>Get the HTML for an Event Select Tag</span>
+<p>Venue Driver provides an API method that will return HTML code for an event select box, to be inserted directly into a web page.  For example, to get a drop-down select box for all upcoming events at the venue with Venue Driver ID code 1234, you might call a URL like this:</p>
+</div>
 
-Venue Driver provides an API method that will return HTML code for an event select box, to be inserted
-directly into a web page.  For example, to get a drop-down select box for all upcoming events at the venue with Venue Driver ID code 1234, you might call a URL like this:
-
-<pre>
-<code>
-http://venuedriver.com/api/venues/1234/events/select_tag.html?username=venuesite&password=password
-</code>
+<pre class="sh_html">
+http://www.venuedriver.com/api/venues/1234/events/select_tag.html?username=venuesite&password=password
 </pre>
+<br/>
+<p>You can test from the command line using the cURL utility:</p>
 
-You can test from the command line using the cURL utility:
-
-<pre>
-<code>
-curl 'http://venuedriver.com/api/venues/129582/events/select_tag.html?username=venuesite&password=password'
-</code>
+<pre class="sh_html">
+curl 'http://www.venuedriver.com/api/venues/129582/events/select_tag.html?username=venuesite&password=password'
 </pre>
+<br/>
+<p>It will return something like this:</p>
 
-It will return something like this:
-
-<pre>
-<code>
+<pre class="sh_html">
 <select id="event" name="event"><option value="3768">Cabaret of Dr. Calagari - Apr 16</option>
 <option value="3769">Latin Night and Tequila Party - Apr 17</option>
 <option value="3859">Visionshock - International District Spring Roll Party - Apr 24</option>
 <option value="3860">Sounders Latin Preparty - Apr 25</option>
 <option value="3832">Glamour - May 01</option></select>
-</code>
 </pre>
+<br/>
+<p>Using that resource URL is pretty simple.  In Ruby for example it looks like this:</p>
 
-Using that resource URL is pretty simple.  In Ruby for example it looks like this:
-
-<pre>
-<code>
+<pre class="sh_html">
 url = "http://venuedriver/api/venues/129582/events/select_tag.html?username=venuesite&password=password"
 events_html = Net::HTTP.get_response(URI.parse(url))
-</code>
 </pre>
+<br/>
+<p>Then you can just drop that HTML snippet into your form with @<%= events_html %>@ or the equivalent in PHP or whatever.  That gives you a simple way to build a form that can request guest list signup for any upcoming event.</p>
 
-Then you can just drop that HTML snippet into your form with @<%= events_html %>@ or the equivalent in PHP or whatever.  That gives you a simple way to build a form that can request guest list signup for any upcoming event.
+<p>When somebody submits the form, creating the guest list entry is similarly simple.  It also involves a simple HTTP query to an API URL.  Are you using PHP?  I can send you an example snippet for doing the post if so.</p>
 
-When somebody submits the form, creating the guest list entry is similarly simple.  It also involves a simple HTTP query to an API URL.  Are you using PHP?  I can send you an example snippet for doing the post if so.
+<div class='link'>
+  <a class='button' href="http://help.venuedriver.com/">Return to Table of Contents</a>
+</div>

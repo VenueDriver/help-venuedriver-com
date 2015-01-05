@@ -1,22 +1,21 @@
 ---
-layout: standard
+layout: page
 title: Get Flyer Images for an Event
 ---
 
-h1. Get flyer images for an event
+<div id='top-box'>
+  <span class='ribbon'>	Get flyer images for an event</span>
 
-Flyers are a nested resource under the event resource.  They are not included in the event list returned by /venues/:venue_id/events.xml, but you can obtain them through the flyer resource:
+<p>Flyers are a nested resource under the event resource.  They are not included in the event list returned by /venues/:venue_id/events.xml, but you can obtain them through the flyer resource:</p>
+</div>
 
-<pre>
-<code>
-  curl 'http://venuedriver.com/api/venues/1234/events/5678/flyers.xml?username=venuesite&password=password'
-</code>
+<pre class="sh_html">
+  curl 'http://www.venuedriver.com/api/venues/1234/events/5678/flyers.xml?username=venuesite&password=password'
 </pre>
+<br/>
+<p>The above will return the list of flyers for the event 5678:</p>
 
-The above will return the list of flyers for the event 5678:
-
-<pre>
-<code>
+<pre class="sh_html">
   <?xml version="1.0" encoding="UTF-8"?>
   <flyers type="array">
     <flyer>
@@ -65,21 +64,17 @@ The above will return the list of flyers for the event 5678:
       <asset-url>/assets/13/original/02_events.jpg</asset-url>
     </flyer>
   </flyers>
-</code>
 </pre>
+<br/>
+<p>You can also use the show action for the event resource.  For example, this will return the list of flyer images for the event 5678 at the venue 1234:</p>
 
-You can also use the show action for the event resource.  For example, this will return the list of flyer images for the event 5678 at the venue 1234:
-
-<pre>
-<code>
+<pre class="sh_html">
   curl 'http://venuedriver.com/api/venues/1234/events/5678.xml?username=venuesite&password=password'
-</code>
 </pre>
+<br/>
+<p>The response includes the attributes for the event as in the above, but it also includes the nested flyer records:</p>
 
-The response includes the attributes for the event as in the above, but it also includes the nested flyer records:
-
-<pre>
-<code>
+<pre class="sh_html">
 <?xml version="1.0" encoding="UTF-8"?>
 <event>
   <VIP-URL nil="true"></VIP-URL>
@@ -150,5 +145,8 @@ The response includes the attributes for the event as in the above, but it also 
     </flyer>
   </flyers>
 </event>
-</code>
 </pre>
+
+<div class='link'>
+  <a class='button' href="http://help.venuedriver.com/">Return to Table of Contents</a>
+</div>
